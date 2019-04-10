@@ -1,0 +1,48 @@
+@keyframes bounceInUp {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: linear;
+  }
+
+  from {
+    // opacity: 0;
+    transform: translate3d(0, 8rem, 0);
+  }
+
+  50% {
+    // opacity: 1;
+    transform: translate3d(0, -1rem, 0);
+  }
+
+  70% {
+    transform: translate3d(0, 8px, 0);
+  }
+
+  85% {
+    transform: translate3d(0, -4px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceOutUp {
+  from {
+    // opacity: 0;
+    transform: translate3d(0, 0px, 0);
+  }
+
+  50% {
+    // opacity: 1;
+    transform: translate3d(0, -9rem, 0);
+  }
+
+  100% {
+    // opacity: 1;
+    transform: translate3d(0, -9rem, 0);
+  }
+}

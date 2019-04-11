@@ -97,6 +97,7 @@
     }
     @media only screen and (max-width: 600px) {
       font-size: 3.5rem;
+      margin-bottom: 2.5rem;
     }
     @media only screen and (max-width: 400px) {
       font-size: 3rem;
@@ -134,7 +135,7 @@
       }
       @media only screen and (max-width: 750px) {
         width: 18rem;
-        height: 6rem;
+        height: 4rem;
       }
     }
   }
@@ -179,9 +180,15 @@
 .animated {
   &--in {
     animation: bounceInUp 0.8s linear;
+    @media only screen and (max-width: 750px) {
+      animation-duration: 1.2s;
+    }
   }
   &--out {
     animation: bounceOutUp 0.8s linear;
+    @media only screen and (max-width: 750px) {
+      animation-duration: 1.2s;
+    }
   }
   &--waiting {
     transform: translateY(10rem);

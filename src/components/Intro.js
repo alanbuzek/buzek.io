@@ -17,7 +17,7 @@ class Intro extends React.Component {
       this.setState({ animations });
       inElement = this.incrementIndex(inElement);
       outElement = this.incrementIndex(outElement);
-    }, 1500);
+    }, 1700);
   }
   incrementIndex(index) {
     let newIndex;

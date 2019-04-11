@@ -561,7 +561,8 @@ ul {
         font-size: 4rem; } }
     @media only screen and (max-width: 600px) {
       .intro__animated {
-        font-size: 3.5rem; } }
+        font-size: 3.5rem;
+        margin-bottom: 2.5rem; } }
     @media only screen and (max-width: 400px) {
       .intro__animated {
         font-size: 3rem; } }
@@ -594,7 +595,7 @@ ul {
       @media only screen and (max-width: 750px) {
         .intro__animated--container {
           width: 18rem;
-          height: 6rem; } }
+          height: 4rem; } }
   @media only screen and (max-width: 600px) {
     .intro__button {
       display: inline-block;
@@ -622,9 +623,15 @@ ul {
 
 .animated--in {
   animation: bounceInUp 0.8s linear; }
+  @media only screen and (max-width: 750px) {
+    .animated--in {
+      animation-duration: 1.2s; } }
 
 .animated--out {
   animation: bounceOutUp 0.8s linear; }
+  @media only screen and (max-width: 750px) {
+    .animated--out {
+      animation-duration: 1.2s; } }
 
 .animated--waiting {
   transform: translateY(10rem); }

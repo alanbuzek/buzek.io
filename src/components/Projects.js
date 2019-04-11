@@ -5,7 +5,11 @@ import projectsData from '../static/projectsData';
 class Projects extends React.Component {
   renderTechStack(techStack) {
     return techStack.map(tech => {
-      return <div className="projects__techstack--tech button button-small">{tech}</div>;
+      return (
+        <div key={tech} className="projects__techstack--tech button button-small">
+          {tech}
+        </div>
+      );
     });
   }
   renderProject(project) {

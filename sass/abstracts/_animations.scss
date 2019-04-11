@@ -9,7 +9,7 @@
 
   from {
     // opacity: 0;
-    transform: translate3d(0, 8rem, 0);
+    transform: translate3d(0, 10rem, 0);
   }
 
   50% {
@@ -38,11 +38,11 @@
 
   50% {
     // opacity: 1;
-    transform: translate3d(0, -9rem, 0);
+    transform: translate3d(0, -11rem, 0);
   }
 
   100% {
     // opacity: 1;
-    transform: translate3d(0, -9rem, 0);
+    transform: translate3d(0, -11rem, 0);
   }
 }

@@ -2,8 +2,17 @@
   color: $color-black;
   @include flex-center;
   position: relative;
-
+  flex-direction: column;
+  transform: translateY(2rem);
   &__container {
+    &--top {
+      @include flex-center;
+      margin-bottom: 5rem;
+    }
+    &--bottom {
+      @include flex-center;
+      justify-content: space-evenly;
+    }
     &--image {
       @include flex-center;
       margin-right: 3rem;
@@ -22,12 +31,14 @@
   &__nonanimated {
     color: $color-grey-dark-2;
     font-size: 4.5rem;
+    line-height: 1;
   }
   &__animated {
     display: flex;
-    font-size: 6.5rem;
+    font-size: 7.5rem;
     font-family: 'Product Sans Bold';
     color: $color-grey-dark-2;
+    line-height: 1;
     &--text {
       position: absolute;
       top: 0;
@@ -47,10 +58,29 @@
       }
     }
     &--container {
-      width: 30rem;
+      width: 35rem;
       position: relative;
-      height: 8rem;
+      height: 8.5rem;
       overflow: hidden;
+    }
+  }
+
+  &__button {
+    &--1 {
+      &:hover {
+        background-color: rgba($color-orange, 0.2);
+      }
+    }
+    &--2 {
+      margin: 0 1.5rem;
+      &:hover {
+        background-color: rgba($color-blue, 0.2);
+      }
+    }
+    &--3 {
+      &:hover {
+        background-color: rgba($color-green, 0.2);
+      }
     }
   }
 }
@@ -63,6 +93,6 @@
     animation: bounceOutUp 0.8s linear;
   }
   &--waiting {
-    transform: translateY(7rem);
+    transform: translateY(10rem);
   }
 }

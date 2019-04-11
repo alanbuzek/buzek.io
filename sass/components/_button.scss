@@ -1,0 +1,12 @@
+.button {
+  padding: 0.8rem 1.5rem;
+  font-size: 2rem;
+  border-radius: $border-radius;
+  border: 2px solid $color-grey-light-2;
+  color: $color-grey-light-4;
+  cursor: pointer;
+  @include transition03;
+  &:hover {
+    color: $color-grey-dark-2;
+  }
+}

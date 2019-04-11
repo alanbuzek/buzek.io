@@ -1,18 +1,21 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-import Intro from './Intro';
+import LandingPage from './LandingPage';
+import Masterlingo from './Masterlingo';
+import Topbar from './Topbar';
 
 class App extends React.Component {
+  componentDidMount() {
+    console.log(window.location.pathname);
+  }
   render() {
     return (
-      <div className="main">
-        <div className="topbar">
-          <div className="topbar__logo">buzek.io</div>
-        </div>
-        <header className="header">
-          <Intro />
-        </header>
-      </div>
+      <Router>
+        <Topbar />
+        <LandingPage path="/" exact />
+        <Masterlingo path="/masterlingo" exact />
+      </Router>
     );
   }
 }

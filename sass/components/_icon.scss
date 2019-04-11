@@ -1,0 +1,10 @@
+.icon {
+  color: $color-grey-light-4;
+  @include transition03;
+  cursor: pointer;
+  font-size: 2.2rem;
+  &:hover {
+    color: $color-grey-dark-2;
+    color: $color-blue;
+  }
+}

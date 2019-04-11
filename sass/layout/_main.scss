@@ -1,0 +1,16 @@
+.main {
+  position: relative;
+  &__location {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    @include flex-center;
+    color: $color-grey-light-4;
+    &--icon {
+      margin-right: 1rem;
+    }
+    &--text {
+      font-size: 2rem;
+    }
+  }
+}

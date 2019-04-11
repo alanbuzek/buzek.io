@@ -17,7 +17,7 @@ class Intro extends React.Component {
       this.setState({ animations });
       inElement = this.incrementIndex(inElement);
       outElement = this.incrementIndex(outElement);
-    }, 1400);
+    }, 1200);
   }
   incrementIndex(index) {
     let newIndex;
@@ -31,29 +31,36 @@ class Intro extends React.Component {
   render() {
     return (
       <div className="intro">
-        <div className="intro__container--image">
-          {' '}
-          <img src="img/profilepic.png" alt="alan buzek" className="intro__image" />
-        </div>
-        <div className="intro__container--text">
-          <div className="intro__nonanimated">Hi, this is Alan.</div>
-          <div className="intro__animated">
-            I am a passionate&nbsp;
-            <div className="intro__animated--container">
-              <div className={`intro__animated--text intro__animated--text--1 animated--${this.state.animations[0]}`}>
-                developer
-              </div>
-              <div className={`intro__animated--text intro__animated--text--2 animated--${this.state.animations[1]}`}>
-                coder
-              </div>
-              <div className={`intro__animated--text intro__animated--text--3 animated--${this.state.animations[2]}`}>
-                engineer
-              </div>
-              <div className={`intro__animated--text intro__animated--text--4 animated--${this.state.animations[3]}`}>
-                goofball
+        <div className="intro__container--top">
+          <div className="intro__container--image">
+            {' '}
+            <img src="img/profilepic.png" alt="alan buzek" className="intro__image" />
+          </div>
+          <div className="intro__container--text">
+            <div className="intro__nonanimated">Hi, this is Alan.</div>
+            <div className="intro__animated">
+              I am a passionate&nbsp;
+              <div className="intro__animated--container">
+                <div className={`intro__animated--text intro__animated--text--1 animated--${this.state.animations[0]}`}>
+                  developer
+                </div>
+                <div className={`intro__animated--text intro__animated--text--2 animated--${this.state.animations[1]}`}>
+                  coder
+                </div>
+                <div className={`intro__animated--text intro__animated--text--3 animated--${this.state.animations[2]}`}>
+                  engineer
+                </div>
+                <div className={`intro__animated--text intro__animated--text--4 animated--${this.state.animations[3]}`}>
+                  creator
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <div className="intro__container--bottom">
+          <div className="intro__button intro__button--1 button">What can you do?</div>
+          <div className="intro__button intro__button--2 button">Show me your portfolio!</div>
+          <div className="intro__button intro__button--3 button">Get in touch.</div>
         </div>
       </div>
     );

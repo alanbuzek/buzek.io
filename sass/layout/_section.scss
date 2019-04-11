@@ -1,0 +1,30 @@
+.section {
+  @include flex-center;
+  padding: 15rem 0;
+  &__1 {
+    background-color: rgba($color-orange, 0.1);
+    &--skills {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__content {
+    @include flex-center;
+    flex-direction: column;
+    max-width: 100rem;
+  }
+}
+
+.skills {
+  display: flex;
+  margin: 0 5rem;
+  flex-direction: column;
+  &__list {
+    @include flex-center;
+    flex-direction: column;
+    &--element {
+      margin-bottom: 1rem;
+      font-size: 2.2rem;
+    }
+  }
+}

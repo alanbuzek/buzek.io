@@ -19,18 +19,18 @@ const projectsData = [
     status: 'Launched on March 6, 2019'
   },
   {
-    name: 'Masterlingo for Chrome',
+    name: 'Masterlingo Extension',
     description: 'A chrome extension enabling to access all functionality of the original app in any page of the web.',
     link: 'https://chrome.google.com/webstore/detail/masterlingo-learn-languag/fbfmjjebfpcefapmipcbckbdpfnjhfmj',
-    img: 'masterlingoChrome.png',
+    img: 'masterlingoExtension.png',
     codeLink: null,
     techStack: ['Javascript (ES6+)', 'SASS', 'Webpack'],
-    status: 'Launched open beta on April 2, 2019'
+    status: 'Launched Beta on April 2, 2019'
   },
   {
     name: 'Taipei Travel App',
     description:
-      'A web app mash-up showcasing the city of Taipei. Upcoming events, restaurants and more through 3rd party API integration',
+      'A web app mash-up showcasing the city of Taipei. Upcoming events, restaurants and more through 3rd party API integration.',
     link: 'https://taipei.netlify.com',
     img: 'taipei.png',
     codeLink: 'https://github.com/Alanyss/TaipeiTravel',
@@ -39,13 +39,13 @@ const projectsData = [
   },
   {
     name: 'buzek.io',
-    description: 'Personal portofolio site showcasing my skills and projects.',
+    description: 'Personal web developer portofolio site.',
     link: 'http://buzek.io',
-    img: 'masterlingo.png',
+    img: 'buzekio.png',
     codeLink: 'https://github.com/Alanyss/buzek.io',
-    techStack: ['React', 'SASS', 'Google Maps API', 'Eventful.com API', 'Google Places API'],
+    techStack: ['Javascript (ES6+)', 'React', 'SASS'],
     status: 'Launched on April 11, 2019'
   }
 ];
 
-export default projects;
+export default projectsData;

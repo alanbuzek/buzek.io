@@ -28,6 +28,10 @@ class Intro extends React.Component {
     }
     return newIndex;
   }
+
+  handleNavScroll = el => {
+    el.scrollIntoView({ behavior: 'smooth' });
+  };
   render() {
     return (
       <div className="intro">
@@ -58,9 +62,24 @@ class Intro extends React.Component {
           </div>
         </div>
         <div className="intro__container--bottom">
-          <div className="intro__button intro__button--1 button">What can you do?</div>
-          <div className="intro__button intro__button--2 button">Show me your portfolio!</div>
-          <div className="intro__button intro__button--3 button">Get in touch.</div>
+          <div
+            className="intro__button intro__button--1 button"
+            onClick={() => this.handleNavScroll(document.getElementById('projects'))}
+          >
+            Show me portfolio!
+          </div>
+          <div
+            className="intro__button intro__button--2 button"
+            onClick={() => this.handleNavScroll(document.getElementById('skills'))}
+          >
+            What's your skillset?
+          </div>
+          <div
+            className="intro__button intro__button--3 button"
+            onClick={() => this.handleNavScroll(document.getElementById('contact'))}
+          >
+            Let's get in touch.
+          </div>
         </div>
       </div>
     );

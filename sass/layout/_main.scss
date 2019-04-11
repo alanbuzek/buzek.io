@@ -1,5 +1,6 @@
 .main {
   position: relative;
+  box-shadow: $box-shadow-3;
   &__location {
     position: absolute;
     bottom: 3rem;
@@ -8,9 +9,27 @@
     color: $color-grey-light-4;
     &--icon {
       margin-right: 1rem;
+      cursor: unset !important;
+      &:hover {
+        color: $color-grey-light-4 !important;
+      }
     }
     &--text {
       font-size: 2rem;
+    }
+  }
+
+  &__resume {
+    position: absolute;
+    bottom: 3rem;
+    font-size: 2rem;
+    right: 3rem;
+    @include transition03;
+    text-decoration: none;
+    color: $color-grey-light-4;
+    cursor: pointer;
+    &:hover {
+      color: $color-grey-dark-2;
     }
   }
 }

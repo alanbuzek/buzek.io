@@ -1,24 +1,24 @@
 .topbar {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   height: 6.5rem;
   width: 100%;
-  // box-shadow: $box-shadow-1;
   display: flex;
   align-items: center;
   padding: 0 2rem;
-  background-color: rgba($color-white, 0.95);
+  padding-right: 0.5rem;
   z-index: 999;
   &__logo {
     font-family: 'Product Sans Bold';
     font-size: 3rem;
-    color: $color-grey-light-3;
+    color: $color-grey-light-4;
     @include transition03;
     cursor: pointer;
     width: max-content;
+    text-decoration: none;
     &:hover {
-      color: $color-grey-dark-2;
+      color: $color-blue;
     }
   }
   &__left-section {
@@ -27,21 +27,15 @@
     color: $color-grey-dark-2;
   }
 
-  &__links {
-    list-style: none;
-    @include flex-center;
-    font-size: 2rem;
-    margin-right: 2rem;
-    & > li {
-      cursor: pointer;
-      margin: 0 0.5rem;
-    }
-  }
-
   &__icons {
     display: flex;
     align-content: center;
     justify-content: space-between;
-    width: 8rem;
+    & > a {
+      margin: 0 1rem;
+      & > * {
+        font-size: 3.5rem;
+      }
+    }
   }
 }

@@ -1,11 +1,40 @@
 .section {
   @include flex-center;
-  padding: 15rem 0;
+  padding: 10rem 0;
+  box-shadow: $box-shadow-3;
   &__1 {
-    background-color: rgba($color-orange, 0.1);
     &--skills {
       display: flex;
       justify-content: space-between;
+    }
+  }
+  &__2 {
+    background-color: rgba($color-blue, 0.3);
+    background-color: $color-blue;
+    align-items: flex-start;
+    padding-bottom: 23rem;
+    box-shadow: $box-shadow-3;
+  }
+  &__3 {
+    background-color: $color-blue;
+    color: $color-white;
+    padding-top: 12rem;
+    padding-bottom: 15rem;
+    .heading-2 {
+      font-size: 6rem;
+      margin-bottom: 4rem;
+    }
+    &--email {
+      font-size: 2.8rem;
+      line-height: 1.7;
+      text-align: center;
+      a {
+        color: $color-white;
+        @include transition03;
+        &:hover {
+          color: $color-grey-light-2;
+        }
+      }
     }
   }
   &__content {
@@ -25,6 +54,79 @@
     &--element {
       margin-bottom: 1rem;
       font-size: 2.2rem;
+    }
+  }
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, max-content);
+  grid-gap: 5rem;
+  margin-top: 3rem;
+  &__project {
+    border-radius: $border-radius;
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 3rem 5rem 3rem;
+    box-shadow: $box-shadow-3;
+    background-color: #fcfcfc;
+  }
+  &__heading {
+    font-size: 3.5rem;
+    @include flex-center;
+    color: $color-black;
+  }
+  &__img {
+    width: 100%;
+    box-shadow: $box-shadow-4;
+    border-radius: $border-radius;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+  }
+
+  &__status {
+    font-size: 2rem;
+    @include flex-center;
+    margin-bottom: 1rem;
+    .button {
+      margin-left: 1rem;
+      color: $color-black;
+      font-size: 2.5rem;
+      padding: 0.5rem 1rem;
+      &:hover {
+        color: $color-blue;
+        border-color: $color-blue;
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__code {
+    font-size: 2.5rem;
+    @include flex-center;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+    a {
+      color: $color-grey-dark-2;
+      @include transition03;
+      &:hover {
+        color: $color-blue;
+      }
+    }
+  }
+
+  &__techstack {
+    &--heading {
+      font-size: 2.2rem;
+      margin-top: 2rem;
+    }
+    &--tech {
+      display: inline-block;
+      margin: 3px;
+      cursor: default !important;
     }
   }
 }

@@ -4,17 +4,18 @@ class Topbar extends React.Component {
   render() {
     return (
       <div className="topbar">
-        <div className="topbar__logo">buzek.io</div>
+        <a className="topbar__logo" href="http://buzek.io">
+          buzek.io
+        </a>
         <div className="topbar__left-section">
-          <ul className="topbar__links">
-            <li className="topbar__links--link">Skills</li>
-            <li className="topbar__links--link">Projects</li>
-            <li className="topbar__links--link">Contact</li>
-          </ul>
           <div className="topbar__icons">
-            <i className="fab fa-github icon" />
-            <i className="fab fa-linkedin icon" />
-            <i className="fas fa-file icon" />
+            <a href="https://github.com/Alanyss" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-github icon" />
+            </a>
+
+            <a href="https://www.linkedin.com/in/alan-buzek-51bb8b142/" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-linkedin icon" />
+            </a>
           </div>
         </div>
       </div>

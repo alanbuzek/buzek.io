@@ -14,8 +14,18 @@ class LandingPage extends React.Component {
             <i className="material-icons main__location--icon icon">place</i>
             <div className="main__location--text">Taipei City, Taiwan</div>
           </div>
+          <a className="main__resume" href="#" target="_blank" rel="noopener noreferrer">
+            See résumé
+          </a>
         </div>
-        <section className="section section__1">
+
+        <section className="section section__2" id="projects">
+          <div className="section__content dark-grey-text">
+            <h1 className="heading heading-1 white-text">Projects</h1>
+            <Projects />
+          </div>
+        </section>
+        <section className="section section__1" id="skills">
           <div className="section__content black-text">
             <h1 className="heading heading-1"> Technical skills</h1>
             <p className="paragraph">
@@ -57,10 +67,13 @@ class LandingPage extends React.Component {
             </div>
           </div>
         </section>
-        <section className="section section__2">
+        <section className="section section__3" id="contact">
           <div className="section__content">
-            <h1 className="heading heading-1">Projects</h1>
-            <Projects />
+            <div className="section__heading heading heading-2">Contact me</div>
+            <div className="section__3--email">
+              I'm currently looking for a new professional opportunity in Taipei, Taiwan. <br /> Feel free to get in
+              touch at <a href="mailto:alan.buzek@gmail.com">alan.buzek@gmail.com</a>.
+            </div>
           </div>
         </section>
       </main>

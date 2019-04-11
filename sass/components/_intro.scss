@@ -132,6 +132,9 @@
       &:hover {
         background-color: rgba($color-orange, 0.2) !important;
       }
+      @media only screen and (max-width: 600px) {
+        margin-left: 0;
+      }
     }
     &--2 {
       margin: 0 1.5rem;

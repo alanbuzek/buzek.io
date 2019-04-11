@@ -12,6 +12,16 @@ html {
   font-weight: 400;
   box-sizing: border-box;
   line-height: 1.4;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 56.25%;
+  }
+  @media only screen and (max-width: 900px) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 43.75%;
+  }
 }
 
 ul {

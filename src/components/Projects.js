@@ -10,7 +10,7 @@ class Projects extends React.Component {
   }
   renderProject(project) {
     return (
-      <div className="projects__project">
+      <div className="projects__project" key={project.name}>
         <div className="heading heading-3 projects__heading">{project.name}</div>
         <img src={`img/projects/${project.img}`} alt={project.name} className="projects__img" />
         <p className="projects__description paragraph-small"> {project.description} </p>
@@ -25,7 +25,7 @@ class Projects extends React.Component {
           {project.codeLink ? (
             <React.Fragment>
               See on&nbsp;
-              <a href={project.codeLink} target="_blank">
+              <a href={project.codeLink} target="_blank" rel="noopener noreferrer">
                 Github
               </a>
             </React.Fragment>

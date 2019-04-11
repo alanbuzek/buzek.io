@@ -2,10 +2,17 @@
   @include flex-center;
   padding: 10rem 0;
   box-shadow: $box-shadow-3;
+  @media only screen and (max-width: 1000px) {
+    padding: 7rem 0;
+  }
   &__1 {
     &--skills {
       display: flex;
       justify-content: space-between;
+      @media only screen and (max-width: 750px) {
+        width: 100%;
+        justify-content: space-evenly;
+      }
     }
   }
   &__2 {
@@ -14,12 +21,23 @@
     align-items: flex-start;
     padding-bottom: 23rem;
     box-shadow: $box-shadow-3;
+    @media only screen and (max-width: 1000px) {
+      padding-bottom: 15rem;
+    }
   }
   &__3 {
     background-color: $color-blue;
     color: $color-white;
     padding-top: 12rem;
     padding-bottom: 15rem;
+    @media only screen and (max-width: 1000px) {
+      padding-top: 9rem;
+      padding-bottom: 11rem;
+    }
+    @media only screen and (max-width: 600px) {
+      padding-top: 6rem;
+      padding-bottom: 8rem;
+    }
     .heading-2 {
       font-size: 6rem;
       margin-bottom: 4rem;
@@ -35,12 +53,25 @@
           color: $color-grey-light-2;
         }
       }
+      @media only screen and (max-width: 1000px) {
+        padding: 0 1.5rem;
+        font-size: 2.6rem;
+        line-height: 1.5;
+      }
+      @media only screen and (max-width: 700px) {
+        font-size: 2.4rem;
+      }
     }
   }
   &__content {
     @include flex-center;
     flex-direction: column;
     max-width: 100rem;
+    @media only screen and (max-width: 1000px) {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 2rem;
+    }
   }
 }
 
@@ -48,12 +79,23 @@
   display: flex;
   margin: 0 5rem;
   flex-direction: column;
+  @media only screen and (max-width: 750px) {
+    margin: 0;
+  }
+  &__heading {
+    @media only screen and (max-width: 600px) {
+      font-size: 2.8rem !important;
+    }
+  }
   &__list {
     @include flex-center;
     flex-direction: column;
     &--element {
       margin-bottom: 1rem;
       font-size: 2.2rem;
+      @media only screen and (max-width: 600px) {
+        font-size: 1.8rem;
+      }
     }
   }
 }
@@ -64,6 +106,22 @@
   grid-template-rows: repeat(2, max-content);
   grid-gap: 5rem;
   margin-top: 3rem;
+  @media only screen and (max-width: 1000px) {
+    grid-gap: 2rem;
+  }
+  @media only screen and (max-width: 750px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, max-content);
+    padding: 0 4rem;
+    grid-gap: 5rem;
+  }
+  @media only screen and (max-width: 600px) {
+    grid-gap: 3rem;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 0;
+  }
+
   &__project {
     border-radius: $border-radius;
     display: flex;
@@ -71,6 +129,12 @@
     padding: 6rem 3rem 5rem 3rem;
     box-shadow: $box-shadow-3;
     background-color: #fcfcfc;
+    @media only screen and (max-width: 700px) {
+      padding: 4rem 2rem 3rem 2rem;
+    }
+    @media only screen and (max-width: 600px) {
+      padding: 3rem 1.5rem 2rem 1.5rem;
+    }
   }
   &__heading {
     font-size: 3.5rem;
@@ -83,6 +147,19 @@
     border-radius: $border-radius;
     margin-bottom: 5rem;
     margin-top: 3rem;
+    @media only screen and (max-width: 900px) {
+      width: 90%;
+    }
+    @media only screen and (max-width: 700px) {
+      margin-top: 2rem;
+      box-shadow: $box-shadow-3;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media only screen and (max-width: 600px) {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &__status {
@@ -109,6 +186,9 @@
     @include flex-center;
     margin-bottom: 4rem;
     margin-top: 1rem;
+    @media only screen and (max-width: 700px) {
+      margin-bottom: 1rem;
+    }
     a {
       color: $color-grey-dark-2;
       @include transition03;

@@ -6,7 +6,9 @@
   to {
     animation-timing-function: linear; }
   from {
-    transform: translate3d(0, 10rem, 0); }
+    transform: translate3d(0, 10rem, 0);
+    @media only screen and (max-width: 750px) {
+      transform: translate3d(0, 8rem, 0); } }
   50% {
     transform: translate3d(0, -1rem, 0); }
   70% {
@@ -20,9 +22,13 @@
   from {
     transform: translate3d(0, 0px, 0); }
   50% {
-    transform: translate3d(0, -11rem, 0); }
+    transform: translate3d(0, -11rem, 0);
+    @media only screen and (max-width: 750px) {
+      transform: translate3d(0, -9rem, 0); } }
   100% {
-    transform: translate3d(0, -11rem, 0); } }
+    transform: translate3d(0, -11rem, 0);
+    @media only screen and (max-width: 750px) {
+      transform: translate3d(0, -9rem, 0); } } }
 
 .white-text {
   color: #fff; }
@@ -492,10 +498,23 @@ ul {
     @media only screen and (max-width: 600px) {
       .intro__container--bottom {
         display: block;
-        width: 90%; } }
-    @media only screen and (max-width: 500px) {
+        width: 100%;
+        padding-left: 4rem; } }
+    @media only screen and (max-width: 430px) {
       .intro__container--bottom {
-        width: 75%; } }
+        padding-left: 6rem; } }
+    @media only screen and (max-width: 380px) {
+      .intro__container--bottom {
+        padding-left: 5rem; } }
+    @media only screen and (max-width: 360px) {
+      .intro__container--bottom {
+        padding-left: 4rem; } }
+    @media only screen and (max-width: 340px) {
+      .intro__container--bottom {
+        padding-left: 3rem; } }
+    @media only screen and (max-width: 330px) {
+      .intro__container--bottom {
+        padding-left: 2rem; } }
   .intro__container--image {
     display: flex;
     justify-content: center;
@@ -566,17 +585,23 @@ ul {
       overflow-y: hidden; }
       @media only screen and (max-width: 1200px) {
         .intro__animated--container {
-          width: 30rem; } }
+          width: 30rem;
+          height: 7.5rem; } }
       @media only screen and (max-width: 1000px) {
         .intro__animated--container {
-          width: 25rem; } }
+          width: 25rem;
+          height: 7rem; } }
       @media only screen and (max-width: 750px) {
         .intro__animated--container {
-          width: 18rem; } }
+          width: 18rem;
+          height: 6rem; } }
   @media only screen and (max-width: 600px) {
     .intro__button {
       display: inline-block;
-      margin: 0.5rem; } }
+      margin: 0.5rem;
+      margin-left: 0;
+      margin-right: 1.5rem;
+      margin-bottom: 1rem; } }
   .intro__button--1:hover {
     background-color: rgba(244, 180, 0, 0.2) !important; }
   @media only screen and (max-width: 600px) {
@@ -603,6 +628,9 @@ ul {
 
 .animated--waiting {
   transform: translateY(10rem); }
+  @media only screen and (max-width: 750px) {
+    .animated--waiting {
+      transform: translateY(8rem); } }
 
 .button {
   padding: 0.8rem 1.5rem;

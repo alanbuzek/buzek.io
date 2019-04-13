@@ -14,7 +14,9 @@ const projectsData = [
       'MongoDB',
       'SASS',
       'Google Cloud Translate',
-      'Microsoft Translate API'
+      'Microsoft Translate API',
+      'OAuth 2.0',
+      'PassportJS'
     ],
     status: 'Launched on March 6, 2019'
   },
@@ -24,7 +26,7 @@ const projectsData = [
     link: 'https://chrome.google.com/webstore/detail/masterlingo-learn-languag/fbfmjjebfpcefapmipcbckbdpfnjhfmj',
     img: 'masterlingoExtension.png',
     codeLink: null,
-    techStack: ['Javascript (ES6+)', 'SASS', 'Webpack'],
+    techStack: ['Javascript (ES6+)', 'SASS', 'Webpack', 'OAuth 2.0', 'Chrome API'],
     status: 'Launched Beta on April 2, 2019'
   },
   {

@@ -63,7 +63,7 @@ class LandingPage extends React.Component {
                 </ul>
               </div>
               <div className="skills">
-                <h2 className="skills__heading heading-2 heading">Others</h2>{' '}
+                <h2 className="skills__heading heading-2 heading">Other</h2>{' '}
                 <ul className="skills__list">
                   <li className="skills__list--element">Webpack</li>
                   <li className="skills__list--element">Babel</li>

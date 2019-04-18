@@ -16,7 +16,9 @@ class Projects extends React.Component {
     return (
       <div className="projects__project" key={project.name}>
         <div className="heading heading-3 projects__heading">{project.name}</div>
-        <img src={`img/projects/${project.img}`} alt={project.name} className="projects__img" />
+        <a className="" href={project.link} target="_blank" rel="noopener noreferrer">
+          <img src={`img/projects/${project.img}`} alt={project.name} className="projects__img" />
+        </a>
         <p className="projects__description paragraph-small"> {project.description} </p>
         <div className="projects__status">
           {project.status}{' '}

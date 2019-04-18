@@ -26,7 +26,7 @@ const projectsData = [
     link: 'https://chrome.google.com/webstore/detail/masterlingo-learn-languag/fbfmjjebfpcefapmipcbckbdpfnjhfmj',
     img: 'masterlingoExtension.png',
     codeLink: null,
-    techStack: ['Javascript (ES6+)', 'SASS', 'Webpack', 'OAuth 2.0', 'Chrome API'],
+    techStack: ['JavaScript (ES6+)', 'SASS', 'Webpack', 'OAuth 2.0', 'Chrome API'],
     status: 'Launched Beta on April 2, 2019'
   },
   {
@@ -45,7 +45,7 @@ const projectsData = [
     link: 'http://buzek.io',
     img: 'buzekio.png',
     codeLink: 'https://github.com/Alanyss/buzek.io',
-    techStack: ['Javascript (ES6+)', 'React', 'SASS'],
+    techStack: ['JavaScript (ES6+)', 'React', 'SASS'],
     status: 'Launched on April 11, 2019'
   }
 ];

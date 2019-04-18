@@ -35,7 +35,7 @@ class LandingPage extends React.Component {
             <h1 className="heading heading-1"> Technical skills</h1>
             <p className="paragraph">
               {' '}
-              I am a full-stack developer proficient in HTML5, CSS3 and Javascript in both the front-end (React.js) and
+              I am a full-stack developer proficient in HTML5, CSS3 and JavaScript in both the front-end (React.js) and
               back-end (Node.js). I have experience working with both NoSQL and SQL databases in the form of MongoDB and
               MySQL and am always looking to expand my skill set.
             </p>
@@ -43,7 +43,7 @@ class LandingPage extends React.Component {
               <div className="skills">
                 <h2 className="skills__heading heading-2 heading">Front-end</h2>{' '}
                 <ul className="skills__list">
-                  <li className="skills__list--element">Javascript (ES6+)</li>
+                  <li className="skills__list--element">JavaScript (ES6+)</li>
                   <li className="skills__list--element">React.js (Redux)</li>
                   <li className="skills__list--element">HTML5</li>
                   <li className="skills__list--element">CSS3 (Flexbox, Grid)</li>

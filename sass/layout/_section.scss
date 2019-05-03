@@ -147,8 +147,11 @@
     border-radius: $border-radius;
     margin-bottom: 5rem;
     margin-top: 3rem;
-    @media only screen and (max-width: 900px) {
-      width: 90%;
+    &--container {
+      @include flex-center;
+    }
+    @media only screen and (max-width: 750px) {
+      width: 92%;
     }
     @media only screen and (max-width: 700px) {
       margin-top: 2rem;
@@ -159,6 +162,10 @@
     @media only screen and (max-width: 600px) {
       margin-top: 1rem;
       margin-bottom: 2rem;
+    }
+    @media only screen and (max-width: 400px) {
+      width: 96%;
+      
     }
   }
 

@@ -411,9 +411,13 @@ ul {
     border-radius: 4px;
     margin-bottom: 5rem;
     margin-top: 3rem; }
-    @media only screen and (max-width: 900px) {
+    .projects__img--container {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    @media only screen and (max-width: 750px) {
       .projects__img {
-        width: 90%; } }
+        width: 92%; } }
     @media only screen and (max-width: 700px) {
       .projects__img {
         margin-top: 2rem;
@@ -424,6 +428,9 @@ ul {
       .projects__img {
         margin-top: 1rem;
         margin-bottom: 2rem; } }
+    @media only screen and (max-width: 400px) {
+      .projects__img {
+        width: 96%; } }
   .projects__status {
     font-size: 2rem;
     display: flex;

@@ -16,7 +16,7 @@ class Projects extends React.Component {
     return (
       <div className="projects__project" key={project.name}>
         <div className="heading heading-3 projects__heading">{project.name}</div>
-        <a className="" href={project.link} target="_blank" rel="noopener noreferrer">
+        <a className="projects__img--container" href={project.link} target="_blank" rel="noopener noreferrer">
           <img src={`img/projects/${project.img}`} alt={project.name} className="projects__img" />
         </a>
         <p className="projects__description paragraph-small"> {project.description} </p>
@@ -36,8 +36,8 @@ class Projects extends React.Component {
               </a>
             </React.Fragment>
           ) : (
-            'Closed Source'
-          )}
+              'Closed Source'
+            )}
         </div>
         <div className="projects__techstack">
           <div className="projects__techstack--heading heading heading-4">Tech Stack:</div>

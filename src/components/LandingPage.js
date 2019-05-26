@@ -1,6 +1,6 @@
-import React from 'react';
-import Projects from './Projects';
-import Intro from './Intro';
+import React from 'react'
+import Projects from './Projects'
+import Intro from './Intro'
 
 class LandingPage extends React.Component {
   render() {
@@ -18,8 +18,7 @@ class LandingPage extends React.Component {
             className="main__resume"
             href="https://drive.google.com/file/d/1Lkrza7JpUVhq3ZbZdNBdps9OZusWWAof/view?usp=sharing"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             See Résumé
           </a>
         </div>
@@ -35,9 +34,8 @@ class LandingPage extends React.Component {
             <h1 className="heading heading-1"> Technical skills</h1>
             <p className="paragraph">
               {' '}
-              I am a full-stack developer proficient in HTML5, CSS3 and JavaScript in both the front-end (React.js) and
-              back-end (Node.js). I have experience working with both NoSQL and SQL databases in the form of MongoDB and
-              MySQL and am always looking to expand my skill set.
+              I am a full-stack developer proficient in HTML5, CSS3 and JavaScript in both the front-end (React.js) and back-end (Node.js). I have experience
+              working with both NoSQL and SQL databases in the form of MongoDB and MySQL and am always looking to expand my skill set.
             </p>
             <div className="section__1--skills">
               <div className="skills">
@@ -79,14 +77,13 @@ class LandingPage extends React.Component {
           <div className="section__content">
             <div className="section__heading heading heading-2">Contact me</div>
             <div className="section__3--email">
-              I'm currently seeking a new professional opportunity in Taipei, Taiwan. <br /> Feel free to get in touch
-              at <a href="mailto:alan.buzek@gmail.com">alan.buzek@gmail.com</a>.
+              Feel free to get in touch with me at <a href="mailto:alan.buzek@gmail.com">alan.buzek@gmail.com</a>.
             </div>
           </div>
         </section>
       </main>
-    );
+    )
   }
 }
 
-export default LandingPage;
+export default LandingPage

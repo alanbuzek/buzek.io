@@ -14,13 +14,13 @@ class LandingPage extends React.Component {
             <i className="material-icons main__location--icon icon">place</i>
             <div className="main__location--text">Taipei City, Taiwan</div>
           </div>
-          <a
+          {/* <a
             className="main__resume"
-            href="https://drive.google.com/file/d/1Lkrza7JpUVhq3ZbZdNBdps9OZusWWAof/view?usp=sharing"
+            href="#"
             target="_blank"
             rel="noopener noreferrer">
             See Résumé
-          </a>
+          </a> */}
         </div>
 
         <section className="section section__2" id="projects">

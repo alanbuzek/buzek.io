@@ -12,7 +12,7 @@ class LandingPage extends React.Component {
           </header>
           <div className="main__location">
             <i className="material-icons main__location--icon icon">place</i>
-            <div className="main__location--text">Taipei City, Taiwan</div>
+            <div className="main__location--text">Prague, Czech Republic</div>
           </div>
           {/* <a
             className="main__resume"

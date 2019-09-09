@@ -1,6 +1,6 @@
-import React from 'react'
-import Projects from './Projects'
-import Intro from './Intro'
+import React from 'react';
+import Projects from './Projects';
+import Intro from './Intro';
 
 class LandingPage extends React.Component {
   render() {
@@ -34,8 +34,10 @@ class LandingPage extends React.Component {
             <h1 className="heading heading-1"> Technical skills</h1>
             <p className="paragraph">
               {' '}
-              I am a full-stack developer proficient in HTML5, CSS3 and JavaScript in both the front-end (React.js) and back-end (Node.js). I have experience
-              working with both NoSQL and SQL databases in the form of MongoDB and MySQL and am always looking to expand my skill set.
+              I am a full-stack developer proficient in HTML5, CSS3 and JavaScript in both the
+              front-end (React.js) and back-end (Node.js). I have experience working with both NoSQL
+              and SQL databases in the form of MongoDB and MySQL and am always looking to expand my
+              skill set.
             </p>
             <div className="section__1--skills">
               <div className="skills">
@@ -43,6 +45,7 @@ class LandingPage extends React.Component {
                 <ul className="skills__list">
                   <li className="skills__list--element">JavaScript (ES6+)</li>
                   <li className="skills__list--element">React.js (Redux)</li>
+                  <li className="skills__list--element">Vue.js</li>
                   <li className="skills__list--element">HTML5</li>
                   <li className="skills__list--element">CSS3 (Flexbox, Grid)</li>
                   <li className="skills__list--element">SASS</li>
@@ -57,7 +60,6 @@ class LandingPage extends React.Component {
                   <li className="skills__list--element">REST</li>
                   <li className="skills__list--element">MongoDB</li>
                   <li className="skills__list--element">MySQL</li>
-                  <li className="skills__list--element">PassportJS</li>
                 </ul>
               </div>
               <div className="skills">
@@ -77,13 +79,14 @@ class LandingPage extends React.Component {
           <div className="section__content">
             <div className="section__heading heading heading-2">Contact me</div>
             <div className="section__3--email">
-              Feel free to get in touch with me at <a href="mailto:alan.buzek@gmail.com">alan.buzek@gmail.com</a>.
+              Feel free to get in touch with me at{' '}
+              <a href="mailto:alan.buzek@gmail.com">alan.buzek@gmail.com</a>.
             </div>
           </div>
         </section>
       </main>
-    )
+    );
   }
 }
 
-export default LandingPage
+export default LandingPage;

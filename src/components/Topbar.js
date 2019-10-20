@@ -9,11 +9,11 @@ class Topbar extends React.Component {
         </a>
         <div className="topbar__left-section">
           <div className="topbar__icons">
-            <a href="https://github.com/Alanyss" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/alanbuzek" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github icon" />
             </a>
 
-            <a href="https://www.linkedin.com/in/alan-buzek-51bb8b142/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/alanbuzek/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin icon" />
             </a>
           </div>

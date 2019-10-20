@@ -14,9 +14,19 @@
   @media only screen and (max-width: 1000px) {
     padding: 0.6rem 0.8rem;
   }
+
+  &--small {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+  }
+
+  &--highlighted {
+    color: $color-blue !important;
+    border-color: $color-blue !important;
+    @include transition03;
+    &:hover {
+      background-color: $color-grey-light-2;
+    }
+  }
 }
 
-.button-small {
-  padding: 0.5rem 1rem;
-  font-size: 1.5rem;
-}

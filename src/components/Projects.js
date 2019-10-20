@@ -6,7 +6,7 @@ class Projects extends React.Component {
   renderTechStack(techStack) {
     return techStack.map(tech => {
       return (
-        <div key={tech} className="projects__techstack--tech button button-small">
+        <div key={tech} className="projects__techstack--tech button button--small">
           {tech}
         </div>
       );
@@ -22,8 +22,8 @@ class Projects extends React.Component {
         <p className="projects__description paragraph-small"> {project.description} </p>
         <div className="projects__status">
           {project.status}{' '}
-          <a className="project__status--live button" href={project.link} target="_blank" rel="noopener noreferrer">
-            See live
+          <a className="project__status--live button button--highlighted" href={project.link} target="_blank" rel="noopener noreferrer">
+            See Live
           </a>
         </div>
         <div className="projects__code">

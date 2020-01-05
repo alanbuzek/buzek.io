@@ -31,7 +31,7 @@ class LandingPage extends React.Component {
         </section>
         <section className="section section__1" id="skills">
           <div className="section__content black-text">
-            <h1 className="heading heading-1"> Technical skills</h1>
+            <h1 className="heading heading-1" id="skills"> Technical skills</h1>
             <p className="paragraph">
               {' '}
               I am a full-stack developer proficient in HTML5, CSS3 and JavaScript in both the
@@ -77,7 +77,7 @@ class LandingPage extends React.Component {
         </section>
         <section className="section section__3" id="contact">
           <div className="section__content">
-            <div className="section__heading heading heading-2">Contact me</div>
+            <h2 className="section__heading heading heading-2" id="contact-me">Contact me</h2>
             <div className="section__3--email">
               Feel free to get in touch with me at{' '}
               <a href="mailto:alan.buzek@gmail.com">alan.buzek@gmail.com</a>.

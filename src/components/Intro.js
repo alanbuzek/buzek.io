@@ -36,26 +36,26 @@ class Intro extends React.Component {
     return (
       <div className="intro">
         <div className="intro__container--top">
-          <div className="intro__container--image">
+          {/* <div className="intro__container--image">
             {' '}
-            <img src="img/profilepic.png" alt="alan buzek" className="intro__image" />
-          </div>
+            <img src="img/profile.jpg" alt="alan buzek" className="intro__image" />
+          </div> */}
           <div className="intro__container--text">
-            <div className="intro__nonanimated">Hi, this is Alan.</div>
+            <div className="intro__nonanimated">This is dosha design.</div>
             <div className="intro__animated">
-              I am a passionate&nbsp;
+              The world of &nbsp;
               <div className="intro__animated--container">
                 <div className={`intro__animated--text intro__animated--text--1 animated--${this.state.animations[0]}`}>
-                  developer
+                creativity
                 </div>
                 <div className={`intro__animated--text intro__animated--text--2 animated--${this.state.animations[1]}`}>
-                  coder
+                invention
                 </div>
                 <div className={`intro__animated--text intro__animated--text--3 animated--${this.state.animations[2]}`}>
-                  engineer
+                design
                 </div>
                 <div className={`intro__animated--text intro__animated--text--4 animated--${this.state.animations[3]}`}>
-                  creator
+                art
                 </div>
               </div>
             </div>

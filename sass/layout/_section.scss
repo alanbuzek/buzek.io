@@ -16,11 +16,13 @@
     }
   }
   &__2 {
-    background-color: rgba($color-blue, 0.3);
-    background-color: $color-blue;
     align-items: flex-start;
     padding-bottom: 23rem;
     box-shadow: $box-shadow-3;
+    background-color: rgba(68, 128, 255, 0.3);
+    background: url(https://templated.co/items/demos/visualize/images/bg.jpg);
+    background-size: cover;
+    background-position: top center;
     @media only screen and (max-width: 1000px) {
       padding-bottom: 15rem;
     }
@@ -66,7 +68,7 @@
   &__content {
     @include flex-center;
     flex-direction: column;
-    max-width: 100rem;
+    max-width: 115rem;
     @media only screen and (max-width: 1000px) {
       width: 100%;
       max-width: 100%;
@@ -102,7 +104,7 @@
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, max-content);
   grid-gap: 5rem;
   margin-top: 3rem;
@@ -142,13 +144,17 @@
     color: $color-black;
   }
   &__img {
+    z-index: 1000;
     width: 100%;
-    box-shadow: $box-shadow-4;
+    box-shadow: $box-shadow-3;
     border-radius: $border-radius;
     margin-bottom: 5rem;
     margin-top: 3rem;
+    transform: translate(-.5rem, -.5rem);
     &--container {
+        cursor: pointer;
       @include flex-center;
+      position: relative;
     }
     @media only screen and (max-width: 750px) {
       width: 92%;
@@ -166,6 +172,20 @@
     @media only screen and (max-width: 400px) {
       width: 96%;
       
+    }
+
+    &--second {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        z-index: 15;
+    }
+
+    &--third {
+        position: absolute;
+        top: 2.5rem;
+        left: 2.5rem;
+        z-index: 10;
     }
   }
 

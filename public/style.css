@@ -34,7 +34,7 @@
   color: #fff; }
 
 .dark-grey-text {
-  color: #555; }
+  color: #ccc; }
 
 .black-text {
   color: #000; }
@@ -71,7 +71,7 @@ ul {
 
 .heading-1 {
   font-size: 8rem;
-  margin-bottom: 6.5rem; }
+  margin-bottom: 12rem; }
   @media only screen and (max-width: 1000px) {
     .heading-1 {
       font-size: 6rem;
@@ -207,7 +207,34 @@ ul {
   background-color: #fff;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background-image: url();
+  position: relative;
+  background: #000;
+  background-image: url(https://yulialee17.github.io/images/banner.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .header::before {
+    -moz-transition: opacity 3s ease;
+    -webkit-transition: opacity 3s ease;
+    -ms-transition: opacity 3s ease;
+    transition: opacity 3s ease;
+    -moz-transition-delay: 0.25s;
+    -webkit-transition-delay: 0.25s;
+    -ms-transition-delay: 0.25s;
+    transition-delay: 0.25s;
+    content: '';
+    display: block;
+    background-color: #000;
+    height: 100%;
+    left: 0;
+    opacity: 0.65;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1; }
 
 .topbar {
   position: absolute;
@@ -223,7 +250,7 @@ ul {
   .topbar__logo {
     font-family: 'Product Sans Bold';
     font-size: 3rem;
-    color: #888;
+    color: #ccc;
     transition: all 0.3s ease;
     cursor: pointer;
     width: max-content;
@@ -233,7 +260,7 @@ ul {
   .topbar__left-section {
     margin-left: auto;
     display: flex;
-    color: #555; }
+    color: #ccc; }
   .topbar__icons {
     display: flex;
     align-content: center;
@@ -253,12 +280,12 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #888; }
+    color: #ccc; }
     .main__location--icon {
       margin-right: 1rem;
       cursor: unset !important; }
       .main__location--icon:hover {
-        color: #888 !important; }
+        color: #ccc !important; }
     .main__location--text {
       font-size: 2rem; }
   .main__resume {
@@ -268,10 +295,107 @@ ul {
     right: 3rem;
     transition: all 0.3s ease;
     text-decoration: none;
-    color: #888;
+    color: #ccc;
     cursor: pointer; }
     .main__resume:hover {
-      color: #555; }
+      color: #ccc; }
+
+/* Thumbnails */
+.thumbnails {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+  margin: 0 0 2em -2em; }
+
+.thumbnails a {
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-bottom: none;
+  display: block;
+  width: 100%;
+  margin: 0 0 3em 0;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.075);
+  cursor: pointer;
+  outline: 0;
+  overflow: hidden; }
+
+.thumbnails a img {
+  display: block;
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
+
+.thumbnails a h3 {
+  margin: 1rem;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  color: #ffffff;
+  font-weight: 200;
+  line-height: 1.5;
+  font-size: 2rem;
+  margin: 1em;
+  text-decoration: none;
+  border: none; }
+
+.thumbnails a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #FF6382; }
+
+.thumbnails > div {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: calc(100% / 3);
+  padding-left: 3em; }
+
+.thumbnails > div > :last-child {
+  margin-bottom: 0; }
+
+@media screen and (max-width: 1280px) {
+  .thumbnails {
+    margin: 0 0 2em -1.5em; }
+  .thumbnails a {
+    margin: 0 0 1.5em 0; }
+  .thumbnails > div {
+    padding-left: 1.5em; } }
+
+@media screen and (max-width: 980px) {
+  .thumbnails h3 {
+    font-size: 0.8em; } }
+
+@media screen and (max-width: 480px) {
+  .thumbnails {
+    display: block; }
+  .thumbnails a {
+    margin: 0 0 2em 0 !important; }
+  .thumbnails > div {
+    display: block;
+    width: 100%; }
+  .thumbnails > div:last-child > :last-child {
+    margin-bottom: 0 !important; }
+  .thumbnails h3 {
+    font-size: 1em; } }
 
 .section {
   display: flex;
@@ -290,11 +414,13 @@ ul {
         width: 100%;
         justify-content: space-evenly; } }
   .section__2 {
-    background-color: rgba(68, 128, 255, 0.3);
-    background-color: #4480ff;
     align-items: flex-start;
     padding-bottom: 23rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background-color: rgba(68, 128, 255, 0.3);
+    background: url(https://templated.co/items/demos/visualize/images/bg.jpg);
+    background-size: cover;
+    background-position: top center; }
     @media only screen and (max-width: 1000px) {
       .section__2 {
         padding-bottom: 15rem; } }
@@ -336,7 +462,7 @@ ul {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    max-width: 100rem; }
+    max-width: 115rem; }
     @media only screen and (max-width: 1000px) {
       .section__content {
         width: 100%;
@@ -367,7 +493,7 @@ ul {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, max-content);
   grid-gap: 5rem;
   margin-top: 3rem; }
@@ -406,15 +532,19 @@ ul {
     align-items: center;
     color: #000; }
   .projects__img {
+    z-index: 1000;
     width: 100%;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     border-radius: 4px;
     margin-bottom: 5rem;
-    margin-top: 3rem; }
+    margin-top: 3rem;
+    transform: translate(-0.5rem, -0.5rem); }
     .projects__img--container {
+      cursor: pointer;
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      position: relative; }
     @media only screen and (max-width: 750px) {
       .projects__img {
         width: 92%; } }
@@ -431,6 +561,16 @@ ul {
     @media only screen and (max-width: 400px) {
       .projects__img {
         width: 96%; } }
+    .projects__img--second {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      z-index: 15; }
+    .projects__img--third {
+      position: absolute;
+      top: 2.5rem;
+      left: 2.5rem;
+      z-index: 10; }
   .projects__status {
     font-size: 2rem;
     display: flex;
@@ -458,7 +598,7 @@ ul {
       .projects__code {
         margin-bottom: 1rem; } }
     .projects__code a {
-      color: #555;
+      color: #ccc;
       transition: all 0.3s ease; }
       .projects__code a:hover {
         color: #4480ff; }
@@ -477,7 +617,8 @@ ul {
   align-items: center;
   position: relative;
   flex-direction: column;
-  transform: translateY(2rem); }
+  transform: translateY(2rem);
+  z-index: 2; }
   .intro__container--top {
     display: flex;
     justify-content: center;
@@ -538,14 +679,14 @@ ul {
     flex-direction: column; }
   .intro__image {
     border-radius: 50%;
-    border: 4px solid #555;
+    border: 4px solid #ccc;
     width: 12rem;
     opacity: 0.9; }
     @media only screen and (max-width: 650px) {
       .intro__image {
         width: 9rem; } }
   .intro__nonanimated {
-    color: #555;
+    color: #ccc;
     font-size: 4.5rem;
     line-height: 1; }
     @media only screen and (max-width: 1200px) {
@@ -555,7 +696,7 @@ ul {
     display: flex;
     font-size: 7.5rem;
     font-family: 'Product Sans Bold';
-    color: #555;
+    color: #ccc;
     line-height: 1; }
     @media only screen and (max-width: 1300px) {
       .intro__animated {
@@ -651,11 +792,11 @@ ul {
   font-size: 2rem;
   border-radius: 4px;
   border: 2px solid #ddd;
-  color: #888;
+  color: #ccc;
   cursor: pointer;
   transition: all 0.3s ease; }
   .button:hover {
-    color: #555;
+    color: #ccc;
     background-color: rgba(0, 0, 0, 0.04); }
   @media only screen and (max-width: 1000px) {
     .button {
@@ -676,5 +817,5 @@ ul {
   cursor: pointer;
   font-size: 2.2rem; }
   .icon:hover {
-    color: #555;
+    color: #ccc;
     color: #4480ff; }

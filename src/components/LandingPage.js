@@ -12,7 +12,7 @@ class LandingPage extends React.Component {
           </header>
           <div className="main__location">
             <i className="material-icons main__location--icon icon">place</i>
-            <div className="main__location--text">Prague, Czech Republic</div>
+            <div className="main__location--text">Czech Republic</div>
           </div>
           {/* <a
             className="main__resume"
@@ -22,7 +22,6 @@ class LandingPage extends React.Component {
             See Résumé
           </a> */}
         </div>
-
         <section className="section section__2" id="projects">
           <div className="section__content dark-grey-text">
             <h1 className="heading heading-1 white-text">Projects</h1>
@@ -31,21 +30,18 @@ class LandingPage extends React.Component {
         </section>
         <section className="section section__1" id="skills">
           <div className="section__content black-text">
-            <h1 className="heading heading-1" id="skills"> Technical skills</h1>
+            <h1 className="heading heading-1" id="skills">About me</h1>
             <p className="paragraph">
               {' '}
-              I am a full-stack developer proficient in HTML5, CSS3 and JavaScript in both the
-              front-end (React.js) and back-end (Node.js). I have experience working with both NoSQL
-              and SQL databases in the form of MongoDB and MySQL and am always looking to expand my
-              skill set.
+              I'm Yulia,from Taipei, Taiwan. I am a senior of fashion design department at Shih Chien Univeristy. I grew up in the town where is famous for indigo dying. It influences me like to try any new ways to create texture or fabric. I am constantly striving to improve and learn. I love to travel and enjoys immersing myself into different cultures to explore design possibilities. Essentially, I'm a thinker and dreamer at heart. I believe that if I could visualise it, I can make it happen. I aspires to live an authentic life built on courage and kindness.
             </p>
             <div className="section__1--skills">
               <div className="skills">
-                <h2 className="skills__heading heading-2 heading">Front-end</h2>{' '}
+                <h2 className="skills__heading heading-2 heading">Graphic design</h2>{' '}
                 <ul className="skills__list">
-                  <li className="skills__list--element">JavaScript (ES6+)</li>
-                  <li className="skills__list--element">React.js (Redux)</li>
-                  <li className="skills__list--element">Vue.js</li>
+                  <li className="skills__list--element">Adobe Illustrator</li>
+                  <li className="skills__list--element">Photoshop</li>
+                  <li className="skills__list--element">Visual design</li>
                   <li className="skills__list--element">HTML5</li>
                   <li className="skills__list--element">CSS3 (Flexbox, Grid)</li>
                   <li className="skills__list--element">SASS</li>
@@ -54,7 +50,7 @@ class LandingPage extends React.Component {
                 </ul>
               </div>
               <div className="skills">
-                <h2 className="skills__heading heading-2 heading">Back-end</h2>{' '}
+                <h2 className="skills__heading heading-2 heading">Merchandising</h2>{' '}
                 <ul className="skills__list">
                   <li className="skills__list--element">Node/Express</li>
                   <li className="skills__list--element">REST</li>
@@ -63,7 +59,7 @@ class LandingPage extends React.Component {
                 </ul>
               </div>
               <div className="skills">
-                <h2 className="skills__heading heading-2 heading">Other</h2>{' '}
+                <h2 className="skills__heading heading-2 heading">Fashion design</h2>{' '}
                 <ul className="skills__list">
                   <li className="skills__list--element">Webpack</li>
                   <li className="skills__list--element">Babel</li>
@@ -84,6 +80,7 @@ class LandingPage extends React.Component {
             </div>
           </div>
         </section>
+        <iframe src="https://yulialee17.github.io/kanata.html" title="W3Schools Free Online Web Tutorials"></iframe>
       </main>
     );
   }

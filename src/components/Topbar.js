@@ -5,7 +5,7 @@ class Topbar extends React.Component {
     return (
       <div className="topbar">
         <a className="topbar__logo" href="http://buzek.io">
-          buzek.io
+          dosha.design
         </a>
         <div className="topbar__left-section">
           <div className="topbar__icons">

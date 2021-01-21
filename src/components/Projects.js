@@ -1,59 +1,78 @@
 import React from 'react';
 
 import projectsData from '../static/projectsData';
-
+import ImageGallery from './ImageGallery';
 class Projects extends React.Component {
-  renderTechStack(techStack) {
-    return techStack.map(tech => {
-      return (
-        <div key={tech} className="projects__techstack--tech button button--small">
-          {tech}
-        </div>
-      );
-    });
-  }
-  renderProject(project) {
-    return (
-      <div className="projects__project" key={project.name}>
-        <div className="heading heading-3 projects__heading">{project.name}</div>
-        <a className="projects__img--container" href={project.link} target="_blank" rel="noopener noreferrer">
-          <img src={`img/projects/${project.img}`} alt={project.name} className="projects__img" />
-        </a>
-        <p className="projects__description paragraph-small"> {project.description} </p>
-        <div className="projects__status">
-          {project.status}{' '}
-          <a className="project__status--live button button--highlighted" href={project.link} target="_blank" rel="noopener noreferrer">
-            See Live
-          </a>
-        </div>
-        <div className="projects__code">
-          Code:{' '}
-          {project.codeLink ? (
-            <React.Fragment>
-              See on&nbsp;
-              <a href={project.codeLink} target="_blank" rel="noopener noreferrer">
-                Github
-              </a>
-            </React.Fragment>
-          ) : (
-              'Closed Source'
-            )}
-        </div>
-        <div className="projects__techstack">
-          <div className="projects__techstack--heading heading heading-4">Tech Stack:</div>
-          <div className="projects__techstack--container">{this.renderTechStack(project.techStack)}</div>
-        </div>
-      </div>
-    );
-  }
-  renderProjects() {
-    return projectsData.map(project => {
-      return this.renderProject(project);
-    });
-  }
-  render() {
-    return <div className="projects dark-grey-text">{this.renderProjects()}</div>;
-  }
+    renderTechStack(techStack) {
+        return techStack.map(tech => {
+            return (
+                <div key={tech} className="projects__techstack--tech button button--small">
+                    {tech}
+                </div>
+            );
+        });
+    }
+    renderProject(project, nextImg, nextNextImg) {
+        return <ImageGallery project={project} nextImg={nextImg} />;
+    }
+    renderProjects() {
+        return projectsData.map((project, idx) => {
+            return this.renderProject(project, (projectsData[idx + 1] || {}).img, (projectsData[idx + 2] || {}).img);
+        });
+    }
+    render() {
+        return (<div className="dark-grey-text">
+            <section class="thumbnails">
+                <div>
+                    <a href="images/fulls/masterlingo.png">
+                        <img src="img/projects/pantone-1.jpg" alt="" />
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </a>
+                    <a href="images/fulls/02.jpg">
+                        <img src="img/projects/card-1.jpg" alt="" />
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </a>
+                    <a href="images/fulls/05.jpg">
+                        <img src="img/projects/pantone-3.jpg" alt="" />
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/fulls/05.jpg">
+                        <img src="img/projects/nameday-2.jpg" alt="" />
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </a>
+                    <a href="images/fulls/03.jpg">
+                        <img src="img/projects/christmas-2.jpg" alt="" />
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </a>
+                    <a href="images/fulls/05.jpg">
+                        <img src="img/projects/nameday-1.jpg" alt="" />
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </a>
+                    <a href="images/fulls/05.jpg">
+                        <img src="img/projects/pantone-2.jpg" alt="" />
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </a>
+                </div>
+                <div>
+                    <a href="images/fulls/06.jpg">
+                        <img src="img/projects/christmas-3.jpg" alt="" />
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </a>
+                    <a href="images/fulls/07.jpg">
+                        <img src="img/projects/07.jpg" alt="" />
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </a>
+                    <a href="images/fulls/05.jpg">
+                        <img src="img/projects/christmas-1.jpg" alt="" />
+                        <h3>Lorem ipsum dolor sit amet</h3>
+                    </a>
+                </div>
+            </section>
+
+        </div>);
+    }
 }
 
 export default Projects;

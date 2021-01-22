@@ -29,7 +29,9 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
         setOpenedModalObject(null);
     }
 
-    
+    if (!openedModalObject){
+        return null;
+    }
 
     return (
         <Modal
@@ -39,11 +41,11 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
             contentLabel="Example Modal"
         >
             <div style={{ display: 'flex' }}>
-                <img src={`img/projects/${openedModalObject}.jpg`} alt="modal" style={{ width: "50%", height: "100%", flex: '1.6 0 0' }}>
+                <img src={`img/projects/${openedModalObject.photos[0]}.jpg`} alt="modal" style={{ width: "50%", height: "100%", flex: '1.6 0 0' }}>
                 </img>
                 <div className="projectModal__right">
-                    <h2>The Project Name</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+                    <h2 style={{ paddingRight: 20 }}>{openedModalObject.title}</h2>
+                    {openedModalObject.description.map(text => <p>{text}</p>)}
                     {renderTechStack(['Adobe Illustrator', 'Sketch', 'Photoshop', 'Painting'])}
                     <div style={{ display: 'flex', marginTop: 10 }}>
                         <img src={`img/projects/ai-logo.png`} alt="modal" className="site-icon" style={{ marginRight: 5 }}></img>

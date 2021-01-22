@@ -204,6 +204,7 @@ ul {
 @font-face {
   font-family: 'gothic';
   src: url("fonts/gothic.eot");
+  font-weight: normal;
   src: local("gothic"), url("fonts/gothic.woff") format("woff"), url("fonts/gothic.ttf") format("truetype"); }
 
 /* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_9785">Text with this font applied</p> */
@@ -265,7 +266,7 @@ ul {
     width: max-content;
     text-decoration: none; }
     .topbar__logo:hover {
-      color: #97d4df; }
+      color: #ed5186; }
   .topbar__left-section {
     margin-left: auto;
     display: flex;
@@ -347,7 +348,6 @@ ul {
   border-top-right-radius: 4px; }
 
 .thumbnails a h3 {
-  margin: 1rem;
   text-align: center;
   cursor: pointer;
   box-sizing: border-box;
@@ -358,7 +358,7 @@ ul {
   color: #ffffff;
   font-weight: 200;
   line-height: 1.5;
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin: 1em;
   text-decoration: none;
   border: none; }
@@ -441,19 +441,28 @@ ul {
       .projectModal__right p {
         font-size: 1.3rem;
         margin-bottom: 1rem; } }
+  @media screen and (max-width: 700px) {
+    .projectModal__right {
+      padding: 1.5rem; }
+      .projectModal__right h2 {
+        font-size: 2rem;
+        margin-bottom: 0.6rem; }
+      .projectModal__right p {
+        font-size: 1rem;
+        margin-bottom: .7rem; } }
 
 .site-icon {
   margin-top: 3px;
-  width: 35px;
-  height: 35px; }
+  width: 25px;
+  height: 25px; }
   @media screen and (max-width: 1000px) {
-    .site-icon {
-      width: 30px;
-      height: 30px; } }
-  @media screen and (max-width: 500px) {
     .site-icon {
       width: 20px;
       height: 20px; } }
+  @media screen and (max-width: 700px) {
+    .site-icon {
+      width: 15px;
+      height: 15px; } }
 
 .card-button {
   padding: 5px 10px;
@@ -538,7 +547,7 @@ a {
       .section__2 {
         padding-bottom: 15rem; } }
   .section__3 {
-    background-color: #97d4df;
+    background-color: #ed5186;
     color: #fff;
     padding-top: 12rem;
     padding-bottom: 15rem; }
@@ -696,8 +705,8 @@ a {
       font-size: 2.5rem;
       padding: 0.5rem 1rem; }
       .projects__status .button:hover {
-        color: #97d4df;
-        border-color: #97d4df; }
+        color: #ed5186;
+        border-color: #ed5186; }
     .projects__status a {
       text-decoration: none; }
   .projects__code {
@@ -714,7 +723,7 @@ a {
       color: #ccc;
       transition: all 0.3s ease; }
       .projects__code a:hover {
-        color: #97d4df; }
+        color: #ed5186; }
   .projects__techstack--heading {
     font-size: 2.2rem;
     margin-top: 2rem; }
@@ -839,13 +848,13 @@ a {
       left: 0;
       animation-fill-mode: forwards !important; }
       .intro__animated--text--1 {
-        color: #f6cd83; }
+        color: #00feff; }
       .intro__animated--text--2 {
-        color: #0d3358; }
+        color: #fff39f; }
       .intro__animated--text--3 {
-        color: #97d4df; }
+        color: #ed5186; }
       .intro__animated--text--4 {
-        color: #c54649; }
+        color: #00ffa2; }
     .intro__animated--container {
       width: 35rem;
       position: relative;
@@ -871,7 +880,7 @@ a {
       margin-right: 1.5rem;
       margin-bottom: 1rem; } }
   .intro__button--1:hover {
-    background-color: rgba(197, 70, 73, 0.2) !important; }
+    background-color: rgba(0, 255, 162, 0.2) !important; }
   @media only screen and (max-width: 600px) {
     .intro__button--1 {
       margin-left: 0; } }
@@ -884,9 +893,9 @@ a {
       .intro__button--2 {
         margin-left: 0; } }
     .intro__button--2:hover {
-      background-color: rgba(151, 212, 223, 0.2) !important; }
+      background-color: rgba(237, 81, 134, 0.2) !important; }
   .intro__button--3:hover {
-    background-color: rgba(246, 205, 131, 0.2) !important; }
+    background-color: rgba(0, 254, 255, 0.2) !important; }
 
 .animated--in {
   animation: bounceInUp 0.8s linear; }
@@ -924,8 +933,8 @@ a {
     padding: 0.5rem 1rem;
     font-size: 1.5rem; }
   .button--highlighted {
-    color: #97d4df !important;
-    border-color: #97d4df !important;
+    color: #ed5186 !important;
+    border-color: #ed5186 !important;
     transition: all 0.3s ease; }
     .button--highlighted:hover {
       background-color: #ddd; }
@@ -937,4 +946,4 @@ a {
   font-size: 2.2rem; }
   .icon:hover {
     color: #ccc;
-    color: #97d4df; }
+    color: #ed5186; }

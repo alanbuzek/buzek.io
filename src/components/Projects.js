@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 
-import ImageGallery from './ImageGallery';
-import ProjectModal from './ProjectModal';
-
-
 const data = [
     {
         name: 'Graphics',
@@ -32,7 +28,7 @@ const data = [
 ]
 
 const Projects = (props) => {
-    const { openedModalObject, setOpenedModalObject } = props;
+    const { setOpenedModalObject } = props;
     const [selectedCategory, setSelectedCategory] = useState(0);
 
     return (<div className="dark-grey-text">

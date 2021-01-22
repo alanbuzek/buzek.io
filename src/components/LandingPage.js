@@ -20,7 +20,7 @@ const LandingPage = () => {
             </div>
             <section className="section section__2" id="projects">
                 <div className="section__content dark-grey-text">
-                    <h1 className="heading heading-1 white-text">Portfolio</h1>
+                    <h1 className="heading heading-1 white-text special-font">Portfolio</h1>
                     <Projects 
                         openedModalObject={openedModalObject}
                         setOpenedModalObject={setOpenedModalObject}

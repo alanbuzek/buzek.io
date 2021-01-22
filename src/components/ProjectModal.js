@@ -51,7 +51,7 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
                     </div>
                 </div>
             </div>
-            <img src="img/close-icon.png" className="site-icon"  style={{ position: 'absolute', top: 10, right: 10, cursor: 'pointer'}} alt="close modal" onClick={closeModal}></img>
+            <img src="img/projects/close-icon.png" className="site-icon"  style={{ position: 'absolute', top: 10, right: 10, cursor: 'pointer'}} alt="close modal" onClick={closeModal}></img>
         </Modal>
     );
 }

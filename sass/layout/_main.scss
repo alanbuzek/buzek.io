@@ -156,10 +156,9 @@
     .thumbnails h3 {
         font-size: 1em;
     }
-
 }
 
-.ReactModal__Overlay  {
+.ReactModal__Overlay {
     z-index: 100 !important;
 }
 
@@ -201,7 +200,7 @@
                 font-size: 3rem;
                 margin-bottom: 1rem;
             }
-    
+
             p {
                 font-size: 1.3rem;
                 margin-bottom: 1rem;
@@ -239,6 +238,7 @@
     cursor: pointer;
     outline: 0;
     overflow: hidden;
+    margin: .5rem;
     margin-bottom: 2rem;
     &:hover {
         background-color: rgba(255, 255, 255, 0.25);
@@ -254,11 +254,22 @@
 .about {
     max-width: 124rem;
     padding: 0 6rem;
-   
+
+    @media screen and (max-width: 900px) {
+        & > div {
+            flex-direction: column-reverse;
+        }
+
+        img {
+            max-width: 200px;
+        }
+    }
 
     &__right {
         flex: 1.4 0 0;
-        
+        @media screen and (max-width: 900px) {
+            margin-bottom: 40px;
+        }
     }
     &__left {
         display: flex;
@@ -280,3 +291,8 @@
         font-size: 1.8rem;
     }
 }
+
+a {
+    color: none;
+    text-decoration: none; /* no underline */
+  }

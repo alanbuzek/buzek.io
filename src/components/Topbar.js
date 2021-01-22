@@ -4,7 +4,7 @@ class Topbar extends React.Component {
   render() {
     return (
       <div className="topbar">
-        <a className="topbar__logo" href="http://buzek.io">
+        <a className="topbar__logo special-font" href="http://buzek.io">
           dosha.design
         </a>
         <div className="topbar__left-section">

@@ -42,8 +42,8 @@ class Intro extends React.Component {
           </div> */}
           <div className="intro__container--text">
             <div className="intro__nonanimated"><img src="img/projects/dosha_logo_w.png" style={{ width: 250 }} alt="dosha logo white"></img></div>
-            <div className="intro__animated">
-              The world of &nbsp;
+            <div className="intro__animated special-font">
+              The world of&nbsp;
               <div className="intro__animated--container">
                 <div className={`intro__animated--text intro__animated--text--1 animated--${this.state.animations[0]}`}>
                 creativity

@@ -41,7 +41,7 @@ class Intro extends React.Component {
             <img src="img/profile.jpg" alt="alan buzek" className="intro__image" />
           </div> */}
           <div className="intro__container--text">
-            <div className="intro__nonanimated">This is dosha design.</div>
+            <div className="intro__nonanimated"><img src="img/projects/dosha_logo_w.png" style={{ width: 250 }} alt="dosha logo white"></img></div>
             <div className="intro__animated">
               The world of &nbsp;
               <div className="intro__animated--container">

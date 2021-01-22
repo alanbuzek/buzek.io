@@ -1,39 +1,39 @@
 .main {
-  position: relative;
-  box-shadow: $box-shadow-3;
-  &__location {
-    position: absolute;
-    bottom: 3rem;
-    left: 3rem;
-    @include flex-center;
-    color: $color-grey-light-4;
-    &--icon {
-      margin-right: 1rem;
-      cursor: unset !important;
-      &:hover {
-        color: $color-grey-light-4 !important;
-      }
+    position: relative;
+    box-shadow: $box-shadow-3;
+    &__location {
+        z-index: 120;
+        position: absolute;
+        bottom: 3rem;
+        left: 3rem;
+        @include flex-center;
+        color: $color-grey-light-4;
+        &--icon {
+            margin-right: 1rem;
+            cursor: unset !important;
+            &:hover {
+                color: $color-grey-light-4 !important;
+            }
+        }
+        &--text {
+            font-size: 2rem;
+        }
     }
-    &--text {
-      font-size: 2rem;
-    }
-  }
 
-  &__resume {
-    position: absolute;
-    bottom: 3rem;
-    font-size: 2rem;
-    right: 3rem;
-    @include transition03;
-    text-decoration: none;
-    color: $color-grey-light-4;
-    cursor: pointer;
-    &:hover {
-      color: $color-grey-dark-2;
+    &__resume {
+        position: absolute;
+        bottom: 3rem;
+        font-size: 2rem;
+        right: 3rem;
+        @include transition03;
+        text-decoration: none;
+        color: $color-grey-light-4;
+        cursor: pointer;
+        &:hover {
+            color: $color-grey-dark-2;
+        }
     }
-  }
 }
-
 
 /* Thumbnails */
 
@@ -50,116 +50,233 @@
     margin: 0 0 2em -2em;
 }
 
-    .thumbnails a {
-        -moz-transition: all 0.2s ease;
-        -webkit-transition: all 0.2s ease;
-        -ms-transition: all 0.2s ease;
-        transition: all 0.2s ease;
-        border-bottom: none;
-        display: block;
-        width: 100%;
-        margin: 0 0 3em 0;
-        text-align: center;
-        border-radius: 4px;
-        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-        background-color: rgba(255, 255, 255, 0.075);
-        cursor: pointer;
-        outline: 0;
-        overflow: hidden;
+.thumbnails a {
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    border-bottom: none;
+    display: block;
+    width: 100%;
+    margin: 0 0 3em 0;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.075);
+    cursor: pointer;
+    outline: 0;
+    overflow: hidden;
+}
+
+.thumbnails a img {
+    display: block;
+    width: 100%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.thumbnails a h3 {
+    margin: 1rem;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    color: #ffffff;
+    font-weight: 200;
+    line-height: 1.5;
+    font-size: 2rem;
+    margin: 1em;
+    text-decoration: none;
+    border: none;
+}
+
+.thumbnails a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #ff6382;
+}
+
+.thumbnails > div {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: calc(100% / 3);
+    padding-left: 3em;
+}
+
+.thumbnails > div > :last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1280px) {
+    .thumbnails {
+        margin: 0 0 2em -1.5em;
     }
 
-        .thumbnails a img {
-            display: block;
-            width: 100%;
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
-        }
-
-        .thumbnails a h3 {
-            margin: 1rem;
-            text-align: center;
-            cursor: pointer;
-            box-sizing: border-box;
-            padding: 0;
-            border: 0;
-            font: inherit;
-            vertical-align: baseline;
-            color: #ffffff;
-            font-weight: 200;
-            line-height: 1.5;
-            font-size: 2rem;
-            margin: 1em;
-            text-decoration: none;
-            border: none;
-        }
-
-        .thumbnails a:hover {
-            background-color: rgba(255, 255, 255, 0.25);
-            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #FF6382;
-        }
+    .thumbnails a {
+        margin: 0 0 1.5em 0;
+    }
 
     .thumbnails > div {
-        display: -moz-flex;
-        display: -webkit-flex;
-        display: -ms-flex;
+        padding-left: 1.5em;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .thumbnails h3 {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .thumbnails {
+        display: block;
+    }
+
+    .thumbnails a {
+        margin: 0 0 2em 0 !important;
+    }
+
+    .thumbnails > div {
+        display: block;
+        width: 100%;
+    }
+
+    .thumbnails > div:last-child > :last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .thumbnails h3 {
+        font-size: 1em;
+    }
+
+}
+
+.ReactModal__Overlay  {
+    z-index: 100 !important;
+}
+
+.ReactModal__Body--open {
+    overflow-y: hidden;
+}
+
+.ReactModal__Content {
+    box-shadow: $box-shadow-2;
+    max-width: 120rem;
+    @media screen and (max-width: 1200px) {
+        max-width: 80%;
+    }
+    @media screen and (max-width: 600px) {
+        max-width: 96%;
+    }
+}
+
+.projectModal {
+    &__right {
+        flex: 1 0 0;
+        padding: 4rem;
+        // display: flex;
+        // flex-direction: column;
+
+        h2 {
+            font-size: 6rem;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        @media screen and (max-width: 1200px) {
+            padding: 2rem;
+            h2 {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+    
+            p {
+                font-size: 1.3rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+.site-icon {
+    margin-top: 3px;
+    width: 35px;
+    height: 35px;
+    @media screen and (max-width: 1000px) {
+        width: 30px;
+        height: 30px;
+    }
+    @media screen and (max-width: 500px) {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.card-button {
+    padding: 5px 10px;
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    border-bottom: none;
+    display: block;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.075);
+    cursor: pointer;
+    outline: 0;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.25);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #ff6382;
+    }
+
+    &--selected {
+        background-color: rgba(255, 255, 255, 0.25);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25), 0 0 0.5em 0 #8d63ff;
+    }
+}
+
+.about {
+    max-width: 124rem;
+    padding: 0 6rem;
+   
+
+    &__right {
+        flex: 1.4 0 0;
+        
+    }
+    &__left {
         display: flex;
-        -moz-flex-direction: column;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
         flex-direction: column;
-        width: calc(100% / 3);
-        padding-left: 3em;
+        justify-content: center;
+        align-items: center;
     }
 
-        .thumbnails > div > :last-child {
-            margin-bottom: 0;
-        }
-
-    @media screen and (max-width: 1280px) {
-
-        .thumbnails {
-            margin: 0 0 2em -1.5em;
-        }
-
-            .thumbnails a {
-                margin: 0 0 1.5em 0;
-            }
-
-            .thumbnails > div {
-                padding-left: 1.5em;
-            }
-
+    h2 {
+        font-size: 4rem;
     }
 
-    @media screen and (max-width: 980px) {
-
-        .thumbnails h3 {
-            font-size: 0.8em;
-        }
-
+    h3 {
+        font-size: 3rem;
+        margin-top: 2rem;
     }
 
-    @media screen and (max-width: 480px) {
-
-        .thumbnails {
-            display: block;
-        }
-
-            .thumbnails a {
-                margin: 0 0 2em 0 !important;
-            }
-
-            .thumbnails > div {
-                display: block;
-                width: 100%;
-            }
-
-                .thumbnails > div:last-child > :last-child {
-                    margin-bottom: 0 !important;
-                }
-
-            .thumbnails h3 {
-                font-size: 1em;
-            }
-
+    p {
+        font-size: 1.8rem;
     }
+}

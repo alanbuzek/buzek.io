@@ -25,13 +25,35 @@ export const renderTechStack = techStack => {
 }
 
 const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
-    function closeModal() {
-        setOpenedModalObject(null);
-    }
-
     if (!openedModalObject){
         return null;
     }
+
+    const [photoIndex, setPhotoIndex] = useState(0);
+
+    function closeModal() {
+        setOpenedModalObject(null);
+        setPhotoIndex(0);
+    }
+
+    function handlePhotoClick() {
+        if (photoIndex + 1 === openedModalObject.photos.length){
+            setPhotoIndex(0);
+        } else {
+            setPhotoIndex(photoIndex + 1);
+        }
+    }
+
+    function handlePhotoClickBack() {
+        if (photoIndex === 0){
+            setPhotoIndex(openedModalObject.photos.length - 1);
+        } else {
+            setPhotoIndex(photoIndex - 1);
+        }
+    }
+
+
+    console.log(photoIndex);
 
     return (
         <Modal
@@ -41,8 +63,10 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
             contentLabel="Example Modal"
         >
             <div style={{ display: 'flex' }}>
-                <img src={`img/projects/${openedModalObject.photos[0]}.jpg`} alt="modal" style={{ width: "50%", height: "100%", flex: '1.6 0 0' }}>
+                <img src={`img/projects/${openedModalObject.photos[photoIndex]}.jpg`} alt="modal" style={{ width: "50%", height: "100%", flex: '1.6 0 0' }}>
                 </img>
+                {openedModalObject.photos.length > 1 && <img src={`img/projects/right-arrow.png`} alt="modal" className="right-arrow" onClick={() => handlePhotoClick()}></img>}
+                {openedModalObject.photos.length > 1 && <img src={`img/projects/right-arrow.png`} alt="modal" className="left-arrow" onClick={() => handlePhotoClickBack()}></img>}
                 <div className="projectModal__right">
                     <h2 style={{ paddingRight: 20 }}>{openedModalObject.title}</h2>
                     {openedModalObject.description.map(text => <p>{text}</p>)}

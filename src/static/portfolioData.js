@@ -18,8 +18,8 @@ export default [
                     stack: [],
                 },
                 {
-                    title: 'Pantone Color of the Year 2021 f.t. IU album- BBIBBI illustrations',
-                    photos: ['pantone-3'],
+                    title: 'Pantone Color of the Year 2021',
+                    photos: ['pantone-3', 'iu-1'],
                     description: [`- 2021 Pantone color of the year is illuminating & ultimate gray`, `- image reference by IU album – BBIBBI`, `- Custom digital portrait drawing from photo by using Abode illustration.`],
                     stack: [],
                 },
@@ -39,14 +39,14 @@ export default [
             ],
             [
                 {
-                    title: 'Name Day Project_no.0121_Běla',
+                    title: 'Name Day Project no.0121_Běla',
                     photos: ['nameday-2'],
                     description: [`Bela means “noble bright” and “noble shining” (from Adalbert) and “white” (from Slavic “bělŭ/бѣлъ”). For girls, Bela means “God is abundance”, “God is my oath” and “God has sworn.`, `With shining and white, with the unique day of 21.01.2021, Běla is an unique existence.`],
                     stack: [],
                 },
                 {
-                    photos: ['pantone-1'],
-                    title: 'Pantone Color of the Year 2021 f.t. IU album- BBIBBI illustrations',
+                    photos: ['pantone-1', 'iu-1'],
+                    title: 'Pantone Color of the Year 2021',
                     description: [`- 2021 Pantone color of the year is illuminating & ultimate gray`, `- image reference by IU album – BBIBBI`, `- Custom digital portrait drawing from photo by using Abode illustration.`],
                     stack: [],
                 },
@@ -58,13 +58,13 @@ export default [
                 },
                 {
                     photos: ['nameday-1'],
-                    title: 'Name Day Project_no.0120_Ilona',
+                    title: 'Name Day Project no.0120_Ilona',
                     description: [`Ilona means “torch” (from ancient Greek “helánē/ἑλάνη”) and “beautiful”, “light”, “bright” and “shining” (from ancient Greek “hēlios/ἥλιος” = sun/sunlight/sunshine).`],
                     stack: [],
                 },
                 {
-                    photos: ['pantone-2'],
-                    title: 'Name Day Project_no.0120_Ilona',
+                    photos: ['pantone-2', 'iu-1'],
+                    title: 'Name Day Project no.0120_Ilona',
                     description: [`Ilona means “torch” (from ancient Greek “helánē/ἑλάνη”) and “beautiful”, “light”, “bright” and “shining” (from ancient Greek “hēlios/ἥλιος” = sun/sunlight/sunshine).`],
                     stack: [],
                 }

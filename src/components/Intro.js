@@ -76,7 +76,7 @@ class Intro extends React.Component {
           </div>
           <div
             className="intro__button intro__button--3 button"
-            onClick={() => this.handleNavScroll(document.getElementById('contact'))}
+            onClick={() => this.handleNavScroll(document.getElementById('skills'))}
           >
             Let's get in touch.
           </div>

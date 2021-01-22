@@ -427,7 +427,7 @@ ul {
   flex: 1 0 0;
   padding: 4rem; }
   .projectModal__right h2 {
-    font-size: 6rem;
+    font-size: 4.5rem;
     margin-bottom: 2rem; }
   .projectModal__right p {
     font-size: 1.8rem;
@@ -449,7 +449,7 @@ ul {
         margin-bottom: 0.6rem; }
       .projectModal__right p {
         font-size: 1rem;
-        margin-bottom: .7rem; } }
+        margin-bottom: 0.7rem; } }
 
 .site-icon {
   margin-top: 3px;
@@ -479,7 +479,7 @@ ul {
   cursor: pointer;
   outline: 0;
   overflow: hidden;
-  margin: .5rem;
+  margin: 0.5rem;
   margin-bottom: 2rem; }
   .card-button:hover {
     background-color: rgba(255, 255, 255, 0.25);
@@ -518,6 +518,29 @@ a {
   color: none;
   text-decoration: none;
   /* no underline */ }
+
+.right-arrow {
+  width: 40px;
+  position: absolute;
+  height: 40px;
+  left: 53%;
+  top: 48%;
+  background: #ff9b9b94;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer; }
+
+.left-arrow {
+  width: 40px;
+  position: absolute;
+  height: 40px;
+  left: 1%;
+  top: 48%;
+  background: #ff9b9b94;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  transform: rotateY(3.142rad); }
 
 .section {
   display: flex;

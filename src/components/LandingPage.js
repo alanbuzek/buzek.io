@@ -1,11 +1,24 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Projects from './Projects';
 import Intro from './Intro';
 import ProjectModal from './ProjectModal';
 import About from './About';
+import portfolioData from '../static/portfolioData';
 
 const LandingPage = () => {
     const [openedModalObject, setOpenedModalObject] = useState(null);
+
+    useEffect(() => {
+        const { hash } = window.location;
+        const id = hash.replace('#', '');
+        if (!id) return;
+
+        const flatList = portfolioData.flatMap(type => type.content.flatMap(column => column));
+        const foundItem = flatList.find(item => item.photos.includes(id));
+        if (foundItem){
+            setOpenedModalObject(foundItem);
+        }
+    }, [])
 
     return (
         <main className="landing-page">

@@ -63,6 +63,12 @@ export default [
                     stack: [],
                 },
                 {
+                    photos: ['hero-img'],
+                    title: 'Goldfish',
+                    description: [`Ilona means “torch” (from ancient Greek “helánē/ἑλάνη”) and “beautiful”, “light”, “bright” and “shining” (from ancient Greek “hēlios/ἥλιος” = sun/sunlight/sunshine).`],
+                    stack: [],
+                },
+                {
                     photos: ['pantone-2', 'iu-1'],
                     title: 'Name Day Project no.0120_Ilona',
                     description: [`Ilona means “torch” (from ancient Greek “helánē/ἑλάνη”) and “beautiful”, “light”, “bright” and “shining” (from ancient Greek “hēlios/ἥλιος” = sun/sunlight/sunshine).`],
@@ -97,8 +103,8 @@ export default [
                     stack: [],
                 },
                 {
-                    title: 'Painting Things',
-                    photos: ['image--031'],
+                    title: 'Slavomír',
+                    photos: ['nameday-3'],
                     description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
                     stack: [],
                 }

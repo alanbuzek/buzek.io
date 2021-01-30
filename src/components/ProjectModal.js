@@ -29,55 +29,57 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
         return null;
     }
 
-    const [photoIndex, setPhotoIndex] = useState(0);
+    const {project, index} = openedModalObject;
+
+    const [projectIndex, setProjectIndex] = useState(index);
 
     function closeModal() {
         setOpenedModalObject(null);
-        setPhotoIndex(0);
+        setProjectIndex(0);
     }
 
     function handlePhotoClick() {
-        if (photoIndex + 1 === openedModalObject.photos.length){
-            setPhotoIndex(0);
+        if (projectIndex + 1 === project.length){
+            setProjectIndex(0);
         } else {
-            setPhotoIndex(photoIndex + 1);
+            setProjectIndex(projectIndex + 1);
         }
     }
 
     function handlePhotoClickBack() {
-        if (photoIndex === 0){
-            setPhotoIndex(openedModalObject.photos.length - 1);
+        if (projectIndex === 0){
+            setProjectIndex(project.length - 1);
         } else {
-            setPhotoIndex(photoIndex - 1);
+            setProjectIndex(projectIndex - 1);
         }
     }
 
-
-    console.log(photoIndex);
-
+    const projectAtCurrIndex = project[projectIndex];
     return (
         <Modal
             isOpen={!!openedModalObject}
             onRequestClose={closeModal}
             style={customStyles}
             contentLabel="Example Modal"
+
         >
             <div style={{ display: 'flex' }}>
-                <img src={`img/projects/${openedModalObject.photos[photoIndex]}.jpg`} alt="modal" style={{ width: "50%", height: "100%", flex: '1.6 0 0' }}>
+                <img src={`img/${projectAtCurrIndex.photo}.jpg`} alt="modal" style={{ width: "50%", height: "100%", flex: '1.6 0 0' }}>
                 </img>
-                {openedModalObject.photos.length > 1 && <img src={`img/projects/right-arrow.png`} alt="modal" className="right-arrow" onClick={() => handlePhotoClick()}></img>}
-                {openedModalObject.photos.length > 1 && <img src={`img/projects/right-arrow.png`} alt="modal" className="left-arrow" onClick={() => handlePhotoClickBack()}></img>}
+                {project.length > 1 && <img src={`img/icons/right-arrow.png`} alt="modal" className="right-arrow" onClick={() => handlePhotoClick()}></img>}
+                {project.length > 1 && <img src={`img/icons/right-arrow.png`} alt="modal" className="left-arrow" onClick={() => handlePhotoClickBack()}></img>}
+                {project.length > 1 && <div className="modal_index">{`${projectIndex + 1}/${project.length}`}</div>}
                 <div className="projectModal__right">
-                    <h2 style={{ paddingRight: 20 }}>{openedModalObject.title}</h2>
-                    {openedModalObject.description.map(text => <p>{text}</p>)}
+                    <h2 style={{ paddingRight: 20 }}>{projectAtCurrIndex.title}</h2>
+                    {projectAtCurrIndex.description.map(text => <p>{text}</p>)}
                     {renderTechStack(['Adobe Illustrator', 'Sketch', 'Photoshop', 'Painting'])}
                     <div style={{ display: 'flex', marginTop: 10 }}>
-                        <img src={`img/projects/ai-logo.png`} alt="modal" className="site-icon" style={{ marginRight: 5 }}></img>
-                        <img src={`img/projects/ps-logo.png`} alt="modal" className="site-icon"></img>
+                        <img src={`img/icons/ai.png`} alt="modal" className="site-icon" style={{ marginRight: 5 }}></img>
+                        <img src={`img/icons/ps.png`} alt="modal" className="site-icon"></img>
                     </div>
                 </div>
             </div>
-            <img src="img/projects/close-icon.png" className="site-icon"  style={{ position: 'absolute', top: 10, right: 10, cursor: 'pointer'}} alt="close modal" onClick={closeModal}></img>
+            <img src="img/icons/close-icon.png" className="site-icon"  style={{ position: 'absolute', top: 10, right: 10, cursor: 'pointer'}} alt="close modal" onClick={closeModal}></img>
         </Modal>
     );
 }

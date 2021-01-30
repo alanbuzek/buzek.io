@@ -31,9 +31,8 @@ export default class LightboxExample extends Component {
         <div className="projects__project" key={project.name}>
         <div className="heading heading-3 projects__heading">{project.name}</div>
         <div className="projects__img--container" onClick={() => this.setState({ isOpen: true })}>
-          <img src={`img/projects/${project.img}`} alt={project.name} className="projects__img" />
-          {nextImg && <img src={`img/projects/${nextImg}`} alt={project.name} className="projects__img projects__img--second" />}
-          {/* {nextNextImg && <img src={`img/projects/${nextNextImg}`} alt={project.name} className="projects__img projects__img--third" />} */}
+          <img src={`img/${project.img}`} alt={project.name} className="projects__img" />
+          {nextImg && <img src={`img/${nextImg}`} alt={project.name} className="projects__img projects__img--second" />}
         </div>
         <p className="projects__description paragraph-small"> {project.description} </p>
         <div className="projects__status">

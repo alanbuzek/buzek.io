@@ -168,6 +168,7 @@
 .ReactModal__Content {
     box-shadow: $box-shadow-2;
     max-width: 120rem;
+    max-height: 95%;
     @media screen and (max-width: 1200px) {
         max-width: 80%;
     }
@@ -332,4 +333,20 @@ a {
     padding: 6px;
     cursor: pointer;
     transform: rotateY(3.142rad);
+}
+
+.modal_index {
+    width: 60px;
+    position: absolute;
+    height: 40px;
+    left: 50%;
+    bottom: 0;
+    background: #ff9b9b94;
+    padding: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

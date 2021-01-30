@@ -8,8 +8,8 @@ const About = () => {
         <div style={{ maxWidth: 1200 }} className="about">
             <div style={{ display: 'flex' }}>
                 <div style={{ flex: '1 0 0' }} className="about__left">
-                    <img src={`img/projects/dosha_logo.png`} alt="modal" style={{ width: 300 }}></img>
-                    <img src={`img/projects/yulia-lee-logo.jpg`} alt="modal" style={{ width: 300 }}></img>
+                    <img src={`img/graphics/other/dosha_logo.png`} alt="modal" style={{ width: 300 }}></img>
+                    <img src={`img/graphics/other/yulia-lee-logo.jpg`} alt="modal" style={{ width: 300 }}></img>
                 </div>
                 <div className="about__right">
                     <h2>About me</h2>
@@ -19,8 +19,8 @@ const About = () => {
                     <h3>Skills</h3>
                     <p style={{ marginTop: 5 }}>I am constantly striving to improve and learn. I love to travel and enjoys immersing myself into different cultures.</p>
                     <div style={{ display: 'flex', marginTop: 5 }}>
-                        <img src={`img/projects/ai-logo.png`} alt="modal" className="site-icon" style={{ marginRight: 5 }}></img>
-                        <img src={`img/projects/ps-logo.png`} alt="modal" className="site-icon" style={{ marginRight: 3 }}></img>
+                        <img src={`img/icons/ai.png`} alt="modal" className="site-icon" style={{ marginRight: 5 }}></img>
+                        <img src={`img/icons/ps.png`} alt="modal" className="site-icon" style={{ marginRight: 3 }}></img>
                         {renderTechStack(['Painting', 'Fashion Design', 'Graphic Design', 'Illustration'])}
                     </div>
                     <h3 style={{ marginTop: 20 }}>Contact</h3>

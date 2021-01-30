@@ -29,7 +29,15 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
         return null;
     }
 
-    const {project, index} = openedModalObject;
+    const {index, imageOnly} = openedModalObject;
+    
+    let {project} = openedModalObject;
+
+    if (imageOnly){
+        project = project.slice(1);
+    }
+
+    console.log(project);
 
     const [projectIndex, setProjectIndex] = useState(index);
 
@@ -66,10 +74,10 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
             <div style={{ display: 'flex' }}>
                 <img src={`img/${projectAtCurrIndex.photo}.jpg`} alt="modal" style={{ width: "50%", height: "100%", flex: '1.6 0 0' }}>
                 </img>
-                {project.length > 1 && <img src={`img/icons/right-arrow.png`} alt="modal" className="right-arrow" onClick={() => handlePhotoClick()}></img>}
+                {project.length > 1 && <img src={`img/icons/right-arrow.png`} alt="modal" className={`right-arrow ${imageOnly ? 'imageOnly' : ''}`} onClick={() => handlePhotoClick()}></img>}
                 {project.length > 1 && <img src={`img/icons/right-arrow.png`} alt="modal" className="left-arrow" onClick={() => handlePhotoClickBack()}></img>}
                 {project.length > 1 && <div className="modal_index">{`${projectIndex + 1}/${project.length}`}</div>}
-                <div className="projectModal__right">
+                {!imageOnly && <div className="projectModal__right">
                     <h2 style={{ paddingRight: 20 }}>{projectAtCurrIndex.title}</h2>
                     {projectAtCurrIndex.description.map(text => <p>{text}</p>)}
                     {renderTechStack(projectAtCurrIndex.tags)}
@@ -77,7 +85,7 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
                         {projectAtCurrIndex.icons.map(icon => 
                         <img src={`img/icons/${icon}.png`} alt="modal" className="tech-icon" style={{ marginRight: 10 }}></img>)}
                     </div>
-                </div>
+                </div>}
             </div>
             <img src="img/icons/close-icon.png" className="site-icon"  style={{ position: 'absolute', top: 10, right: 10, cursor: 'pointer'}} alt="close modal" onClick={closeModal}></img>
         </Modal>

@@ -14,10 +14,10 @@ const Projects = (props) => {
                 </div>
             ))}
         </div>
-        <ReactTooltip place="top" type="dark" effect="solid" delayShow={100} />
+        <ReactTooltip place="top" type="light" effect="solid" delayShow={100} />
         <section class="thumbnails">
             {portfolioData[selectedCategory].content.map(column => (<div>
-                {column.map(({project, index}) => {
+                {column.map(({project, index, imageOnly}) => {
                     console.log(project, index);
                     return (
                         <>
@@ -26,7 +26,7 @@ const Projects = (props) => {
                         href="/"
                         onClick={e => {
                             e.preventDefault();
-                            setOpenedModalObject({project, index});
+                            setOpenedModalObject({project, index, imageOnly });
                         }}>
 
                         <img src={`img/${project[index].photo}.jpg`} alt="" />

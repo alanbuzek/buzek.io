@@ -224,22 +224,20 @@
 
 .site-icon {
     margin-top: 3px;
-    width: 25px;
-    height: 25px;
-    @media screen and (max-width: 1000px) {
-        width: 20px;
-        height: 20px;
-    }
-    @media screen and (max-width: 700px) {
-        width: 15px;
-        height: 15px;
-    }
+    width: 2rem;
+    height: 2rem;
 }
 
 .tech-icon {
     margin-top: 3px;
-    // width: 45px;
     height: 45px;
+
+    @media screen and (max-width: 1000px) {
+        height: 35px;
+    }
+    @media screen and (max-width: 700px) {
+        height: 20px;
+    }
 }
 
 .card-button {
@@ -317,21 +315,24 @@ a {
 }
 
 .right-arrow {
-    width: 40px;
+    width: 4rem;
     position: absolute;
-    height: 40px;
+    height: 4rem;
     left: 53%;
     top: 48%;
     background: #ff9b9b94;
     border-radius: 50%;
     padding: 6px;
     cursor: pointer;
+    &.imageOnly {
+        left: 96%;
+    }
 }
 
 .left-arrow {
-    width: 40px;
+    width: 4rem;
     position: absolute;
-    height: 40px;
+    height: 4rem;
     left: 1%;
     top: 48%;
     background: #ff9b9b94;
@@ -342,9 +343,9 @@ a {
 }
 
 .modal_index {
-    width: 60px;
+    width: 6rem;
     position: absolute;
-    height: 40px;
+    height: 4rem;
     left: 50%;
     bottom: 0;
     background: #ff9b9b94;

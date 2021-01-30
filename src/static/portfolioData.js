@@ -53,6 +53,14 @@ const namedayProject = [
         title: 'Name Day Project no.0129 Zdislava',
         description: [`Zdislava is of Slavic origin, composed of two Proto-Slavic elements: “zídati (зи́дати)” (to build, to create, construct) plus “sláva (сла́ва)” (glory, fame, renown, honor, repute, reputation). In turn the name means “created with glory, glory of creation”.`, `Glory of creation is shinnig.`]
     },
+    {
+        photo: 'robin',
+        title: 'Name Day Project no.0130 Robin', 
+        description: [
+            'Robin is is a small insectivorous passerine bird that belongs to the chat subfamily of the Old World flycatcher family.', 
+            'Červenka robin.'
+        ]
+    }
 ].map(nameObj => ({ ...nameObj, tags: ['Adobe Illustrator', 'Font Design', 'Poster Design'], icons: ['ai'], photo: `graphics/nameday/${nameObj.photo}`}))
 
 
@@ -87,14 +95,14 @@ const doshaBusinessCardProject = [1, 2, 3].map(number => ({
     icons: ['ai', 'ps'],
 }));
 
-const parallelWorld = [1, 2, 3, 4, 5].map(number => ({
+const parallelWorld = [0, 1, 2, 3, 4, 5].map(number => ({
     title: '2150’s Parallel World',
-    description: [`•  Inspired by Movie "The Fifth Elements"`,
-        `Two parallel worlds reflect comic and space world. Stella & Eris, the characters from two worlds. The story began on Eris visited the comic side unexpectedly...`,
-        `Design is not limited to artistic elements; it is more of an integrated part of life`, `Design with a grateful heart, let the design warm your heart more.`, `Dosha Design.`],
-    photo: `graphics/parallel/parallel-${number}`,
-    tags: ['Photoshop', 'Fashion stylist'],
-    icons: ['ps'],
+    // description: [`•  Inspired by Movie "The Fifth Elements"`,
+    //     `Two parallel worlds reflect comic and space world. Stella & Eris, the characters from two worlds. The story began on Eris visited the comic side unexpectedly...`,
+    //     `Design is not limited to artistic elements; it is more of an integrated part of life`, `Design with a grateful heart, let the design warm your heart more.`, `Dosha Design.`],
+    photo: `graphics/parallel/${number}`,
+    // tags: ['Photoshop', 'Fashion stylist'],
+    // icons: ['ps'],
 }));
 
 const digitalFashion = [1, 2].map(number => ({
@@ -188,8 +196,13 @@ export default [
                     index: 2,
                 },
                 {
+                    project: namedayProject,
+                    index: 10,
+                },
+                {
                     project: parallelWorld,
                     index: 0,
+                    imageOnly: true, 
                 },
                 {
                     project: christmasProject,

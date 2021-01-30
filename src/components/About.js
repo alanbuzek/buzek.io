@@ -19,8 +19,8 @@ const About = () => {
                     <h3>Skills</h3>
                     <p style={{ marginTop: 5 }}>I am constantly striving to improve and learn. I love to travel and enjoys immersing myself into different cultures.</p>
                     <div style={{ display: 'flex', marginTop: 5 }}>
-                        <img src={`img/icons/ai.png`} alt="modal" className="site-icon" style={{ marginRight: 5 }}></img>
-                        <img src={`img/icons/ps.png`} alt="modal" className="site-icon" style={{ marginRight: 3 }}></img>
+                        <img src={`img/icons/ai.png`} alt="modal" className="site-icon" style={{ marginRight: 5, width: 28, height: 28 }}></img>
+                        <img src={`img/icons/ps.png`} alt="modal" className="site-icon" style={{ marginRight: 3, width: 28, height: 28 }}></img>
                         {renderTechStack(['Painting', 'Fashion Design', 'Graphic Design', 'Illustration'])}
                     </div>
                     <h3 style={{ marginTop: 20 }}>Contact</h3>

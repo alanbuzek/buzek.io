@@ -53,7 +53,7 @@ const namedayProject = [
         title: 'Name Day Project no.0129 Zdislava',
         description: [`Zdislava is of Slavic origin, composed of two Proto-Slavic elements: “zídati (зи́дати)” (to build, to create, construct) plus “sláva (сла́ва)” (glory, fame, renown, honor, repute, reputation). In turn the name means “created with glory, glory of creation”.`, `Glory of creation is shinnig.`]
     },
-].map(nameObj => ({ ...nameObj, tags: ['Adobe Illustrator', 'Font Design', 'Poster Design'], icons: 'ai', photo: `graphics/nameday/${nameObj.photo}`}))
+].map(nameObj => ({ ...nameObj, tags: ['Adobe Illustrator', 'Font Design', 'Poster Design'], icons: ['ai'], photo: `graphics/nameday/${nameObj.photo}`}))
 
 
 const christmasProject = [1, 2, 3, 4, 5, 6].map(number => ({
@@ -77,7 +77,7 @@ const pantoneProject = [1, 2, 3, 4, 5, 6].map(number => ({
     icons: ['ai']
 }));
 
-const doshaBusinessCardProject = [1, 2, 3, 4, 5, 6].map(number => ({
+const doshaBusinessCardProject = [1, 2, 3].map(number => ({
     title: 'Business card',
     description: [`Dosha.design business card design.`,
         `Dosha means “thank you” in Taiwanese.`,
@@ -97,7 +97,7 @@ const parallelWorld = [1, 2, 3, 4, 5].map(number => ({
     icons: ['ps'],
 }));
 
-const digitalFashion = [1, 2, 3, 4, 5, 6].map(number => ({
+const digitalFashion = [1, 2].map(number => ({
     title: '3D Digital Fashion Garment',
     description: [`We are not only using technologies nowadays, but we also live with it.`],
     photo: `graphics/digitalFashion/digitalFashion-${number}`,

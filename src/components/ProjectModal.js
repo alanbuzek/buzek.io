@@ -72,10 +72,10 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
                 <div className="projectModal__right">
                     <h2 style={{ paddingRight: 20 }}>{projectAtCurrIndex.title}</h2>
                     {projectAtCurrIndex.description.map(text => <p>{text}</p>)}
-                    {renderTechStack(['Adobe Illustrator', 'Sketch', 'Photoshop', 'Painting'])}
-                    <div style={{ display: 'flex', marginTop: 10 }}>
-                        <img src={`img/icons/ai.png`} alt="modal" className="site-icon" style={{ marginRight: 5 }}></img>
-                        <img src={`img/icons/ps.png`} alt="modal" className="site-icon"></img>
+                    {renderTechStack(projectAtCurrIndex.tags)}
+                    <div style={{ display: 'flex', marginTop: 10, marginLeft: 3 }}>
+                        {projectAtCurrIndex.icons.map(icon => 
+                        <img src={`img/icons/${icon}.png`} alt="modal" className="tech-icon" style={{ marginRight: 10 }}></img>)}
                     </div>
                 </div>
             </div>

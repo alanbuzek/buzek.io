@@ -10,7 +10,6 @@ class Intro extends React.Component {
     let inElement = 1;
     let outElement = 0;
     setInterval(() => {
-      console.log(this.state.aniamtions);
       let animations = INITIAL_ANIMATIONS;
       animations[inElement] = 'in';
       animations[outElement] = 'out';
@@ -32,6 +31,7 @@ class Intro extends React.Component {
   handleNavScroll = el => {
     el.scrollIntoView({ behavior: 'smooth' });
   };
+
   render() {
     return (
       <div className="intro">

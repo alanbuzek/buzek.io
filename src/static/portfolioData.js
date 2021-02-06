@@ -60,6 +60,62 @@ const namedayProject = [
             'Robin is is a small insectivorous passerine bird that belongs to the chat subfamily of the Old World flycatcher family.',
             'Červenka robin.'
         ]
+    },
+    {
+        photo: 'marika',
+        title: 'Name Day Project no.0131 Marika',
+        description: [
+            `Marika means Of The Sea Or Bitter and is of Polish origin.`,
+            `While inner beauty stays permanent like an ocean. By all means, hold strong to your inner beauty, even though it's bitter sometimes.`
+        ]
+    },
+    {
+        photo: 'hynek',
+        title: 'Name Day Project no.0201 Hynek',
+        description: [
+            `Hynek means “ruler of the home, sovereign of the homeland”.`,
+            `The name derives from the Old High German name “Haimirich”, composed of two elements “*haimaz” (home, house) plus “*rīkijaz” (kingly, royal, noble, mighty, distinguished, powerful, rich).`
+        ]
+    },
+    {
+        photo: 'nela',
+        title: 'Name Day Project no.0202 Nela',
+        description: [
+            `Nela means “horn” (from Cornelia) and “of inestimable worth” or “priceless one” (from Antonela).`,
+            `Art is one of inestimable human's wisdom wealth, and music is proceless one.`
+        ]
+    },
+    {
+        photo: 'blazej',
+        title: 'Name Day Project no.0203 Blažej',
+        description: [
+            `Blažej means lisping and stammering.
+            Just like expressing yourself in the fierce wind.`
+        ]
+    },
+    {
+        photo: 'jarmila',
+        title: 'Name Day Project no.0204 Jarmila',
+        description: [
+            `Jarmila means "Favor of spring" ; "Lover of spring".`,
+            `Spring is nature's way of saying, 'Let's Party!'`
+        ]
+    },
+    {
+        photo: 'dobromila',
+        title: 'Name Day Project no.0205 Dobromila',
+        description: [
+            `Dobromila is a Slavic origin given name meaning: dobro - "good, goodness" and mil/mił - "love, to like, dear".`,
+            `Opps! Cuteness overloaded!`
+        ]
+    },
+    {
+        photo: 'vanda',
+        title: 'Name Day Project no.0206 Vanda',
+        description: [
+            `Vanda, any of a genus (Vanda) of small-flowered tropical orchids of the Eastern Hemisphere, having racemes of fragrant white, lilac, blue, or greenish flowers.`,
+            `Flower talk of Vanda means excellent and beautiful, immortal for all generations.`
+        ]
     }
 ].map(nameObj => ({ ...nameObj, tags: ['Adobe Illustrator', 'Font Design', 'Poster Design'], icons: ['ai'], photo: `graphics/nameday/${nameObj.photo}` }))
 
@@ -168,23 +224,53 @@ for (let i = 1; i < 5; i++) {
     });
 }
 
-const postcard = [];
-for (let i = 1; i < 5; i++) {
-    postcard.push({
-        title: 'Postcards',
-        photo: `painting/postcard-${i}`,
-        description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
-        tags: ['Photoshop', 'Moodboard'],
-        icons: ['ps'],
-    });
-}
+const postcard = ['520 Holiday', 'St. Petersburg', 'Baloon dog','Painting postcards', 'Taipei'].map((title, index) => ({
+    title,
+    photo: `painting/postcard-${index + 1}`,
+    description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
+    tags: ['Photoshop', 'Moodboard'],
+    icons: ['ps'],
+}));
 
 export const kanataProject = [{
     project: kanata,
     index: 0,
     imageOnly: true,
-    fullWidth: true,
+    type: 'kanata',
 }];
+
+const rabbitPainting = [{
+    title: 'Rabbit Painting',
+    photo: `painting/rabbit`,
+    description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
+    tags: ['Photoshop', 'Moodboard'],
+    icons: ['ps'],
+}];
+
+const moodBoard = [{
+    title: 'MoodBoard',
+    photo: `painting/moodboard`,
+    description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
+    tags: ['Photoshop', 'Moodboard'],
+    icons: ['ps'],
+}];
+
+export const projectsMap = {
+    namedayProject, 
+    christmasProject,
+    pantoneProject,
+    doshaBusinessCardProject,
+    parallelWorld, 
+    digitalFashion, 
+    liquidIllusion,
+    kanata,
+    owl,
+    goldfish,
+    textiles,
+    postcard,
+    rabbitPainting,
+    moodBoard
+}
 
 export default [
     {
@@ -194,78 +280,88 @@ export default [
                 {
                     project: christmasProject,
                     index: 0,
+                    type: 'christmasProject',
+                },
+                {
+                    project: namedayProject,
+                    index: 13,
+                    type: 'namedayProject',
+                },
+                {
+                    project: christmasProject,
+                    index: 4,
+                    type: 'christmasProject',
+                },
+                {
+                    project: pantoneProject,
+                    index: 0,
+                    type: 'pantoneProject',
                 },
                 {
                     project: doshaBusinessCardProject,
                     index: 0,
-                },
-                {
-                    project: pantoneProject,
-                    index: 0,
-                },
-                {
-                    index: 0,
-                    project: [{
-                        photo: 'graphics/other/yulia-lee-logo',
-                        title: 'Yulia Lee Personal logo',
-                        description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-                        tags: [],
-                        icons: [],
-                    }]
-                },
-                {
-                    project: namedayProject,
-                    index: 6,
+                    type: 'doshaBusinessCardProject',
                 },
             ],
             [
                 {
                     project: namedayProject,
                     index: 0,
+                    type: 'namedayProject',
                 },
                 {
                     project: pantoneProject,
                     index: 2,
+                    type: 'pantoneProject',
                 },
                 {
                     project: digitalFashion,
                     index: 0,
+                    type: 'digitalFashion',
                 },
                 {
                     project: namedayProject,
-                    index: 1,
+                    index: 15,
+                    type: 'namedayProject',
                 },
                 {
                     project: liquidIllusion,
                     index: 0,
+                    type: 'liquidIllusion',
                 },
                 {
                     project: namedayProject,
-                    index: 2,
+                    index: 12,
+                    type: 'namedayProject',
                 },
             ],
             [
                 {
-                    project: christmasProject,
-                    index: 2,
+                    project: pantoneProject,
+                    index: 4,
+                    type: 'pantoneProject',
                 },
                 {
                     project: namedayProject,
                     index: 10,
+                    type: 'namedayProject',
                 },
                 {
                     project: parallelWorld,
                     index: 0,
                     imageOnly: true,
+                    type: 'parallelWorld',
                 },
                 {
                     project: christmasProject,
-                    index: 4,
+                    index: 2,
+                    type: 'christmasProject',
                 },
                 {
-                    project: pantoneProject,
-                    index: 4
-                }
+                    project: namedayProject,
+                    index: 17,
+                    type: 'namedayProject',
+                },
             ],
         ]
     },
@@ -274,43 +370,37 @@ export default [
         content: [
             [
                 {
-                    project: [{
-                        title: 'Rabbit Painting',
-                        photo: `painting/rabbit`,
-                        description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
-                        tags: ['Photoshop', 'Moodboard'],
-                        icons: ['ps'],
-                    }],
+                    project: rabbitPainting,
                     index: 0,
+                    type: 'rabbitPainting',
                 },
                 {
                     project: postcard,
                     index: 1,
+                    type: 'postcard',
                 }
             ],
             [
                 {
-                    project: [{
-                        title: 'MoodBoard',
-                        photo: `painting/moodboard`,
-                        description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
-                        tags: ['Photoshop', 'Moodboard'],
-                        icons: ['ps'],
-                    }],
+                    project: moodBoard,
                     index: 0,
+                    type: 'moodBoard',
                 },
                 {
                     project: postcard,
                     index: 3,
+                    type: 'postcard',
                 },
             ],
             [{
                 project: postcard,
                 index: 2,
+                type: 'postcard',
             },
             {
                 project: postcard,
                 index: 0,
+                type: 'postcard',
             }],
         ]
     },
@@ -320,14 +410,17 @@ export default [
             [{
                 project: goldfish,
                 index: 0,
+                type: 'goldfish',
             }],
             [{
                 project: owl,
                 index: 0,
+                type: 'owl',
             }],
             [{
                 project: textiles,
                 index: 0,
+                type: 'textiles',
             }],
         ]
     }

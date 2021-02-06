@@ -1,16 +1,31 @@
-export function getQueryVariable(variable) {
+const getQueryParam = param => {
     const query = window.location.search.substring(1);
     const vars = query.split('&');
     for (let i = 0; i < vars.length; i++) {
         const pair = vars[i].split('=');
-        if (decodeURIComponent(pair[0]) == variable) {
+        if (decodeURIComponent(pair[0]) == param) {
             return decodeURIComponent(pair[1]);
         }
     }
 }
 
-export function buildQueryParamOfProject(type, index, imageOnly){
-    return `?project=${type}&index=${index}${imageOnly ? '&imageOnly=true': ''}`
+export function getQueryVariable(variable) {
+    if (variable === 'imageOnly'){
+        return getQueryParam(variable);
+    }
+
+    const result = window.location.pathname.split('/').filter(value => !!value);
+    if (result.length > 0 && variable === 'project'){
+        return result[0];
+    }
+
+    if (result.length > 1 && variable === 'index'){
+        return result[1];
+    }
+}
+
+export function buildQueryParamOfProject(type, index){
+    return `/${type}/${index}`
 }
 
 export function addMetaTag(type, typeValue, content){

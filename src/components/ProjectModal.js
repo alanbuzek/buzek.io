@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { buildQueryParamOfProject } from '../helper';
+import { buildQueryParamOfProject, getQueryVariable } from '../helper';
+import { Link, useHistory, useLocation } from "react-router-dom";
 
 const customStyles = {
     content: {
@@ -26,33 +27,40 @@ export const renderTechStack = techStack => {
     });
 }
 
+const getProjectIndex = () => {
+    return parseInt(getQueryVariable('index'), 10);
+}
+
 const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
-    if (!openedModalObject) {
+    if (!openedModalObject || !openedModalObject.project) {
         return null;
     }
 
-    const { index, imageOnly, type } = openedModalObject;
+    const { imageOnly, type } = openedModalObject;
     let { project } = openedModalObject;
     console.log(openedModalObject);
 
-    const [projectIndex, setProjectIndex] = useState(index);
     const [copied, setCopied] = useState(false);
 
+    const location = useLocation();
     useEffect(() => {
-        window.history.pushState({}, document.title, buildQueryParamOfProject(type, projectIndex, imageOnly));
+        const projectIndex = getProjectIndex();
+        if (!project[projectIndex]){
+            return null;
+        }
+
+        window.history.pushState({}, document.title, buildQueryParamOfProject(type, projectIndex));
         document.title = project[projectIndex].title + " - dosha.design";
         document.querySelector('meta[name="description"]').setAttribute("content", (project[projectIndex].description || []).join(' '));
         document.querySelector('meta[property="og:url"]').setAttribute("content", window.location.href);
         document.querySelector('meta[property="og:title"]').setAttribute("content", project[projectIndex].title + " - dosha.design");
-        document.querySelector('meta[property="og:image"]').setAttribute("content", `${window.location.origin}/img/${project[projectIndex].photo}.jpg`);
+        document.querySelector('meta[property="og:image"]').setAttribute("content", `/img/${project[projectIndex].photo}.jpg`);
         document.querySelector('meta[property="og:description"]').setAttribute("content", (project[projectIndex].description || []).join(' '));
-    }, [projectIndex])
+        setCopied(false);
+    }, [location])
 
+    const history = useHistory();
     function closeModal() {
-        window.history.pushState({}, document.title, "/");
-        setOpenedModalObject(null);
-        setProjectIndex(0);
-
         // cleanup head
         document.title = `dosha.design - Yulia Lee's graphic design brand`;
         document.querySelector('meta[name="description"]').setAttribute("content",`My personal graphic design brand. Check out my work!`);
@@ -60,24 +68,28 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
         document.querySelector('meta[property="og:title"]').setAttribute("content",`My personal graphic design brand. Check out my work!`);
         document.querySelector('meta[property="og:image"]').setAttribute("content", `https://dosha.design/img/graphics/other/og-image.png`);
         document.querySelector('meta[property="og:description"]').setAttribute("content", `My personal graphic design brand. Check out my work!`);
+
+        history.push('/');
     }
 
-    function handlePhotoClick() {
-        setCopied(false);
+    function getNextPhotoLink() {
+        const projectIndex = getProjectIndex();
+        let index = projectIndex + 1;
         if (projectIndex + 1 === project.length) {
-            setProjectIndex(0);
-        } else {
-            setProjectIndex(projectIndex + 1);
-        }
+            index = 0;
+        } 
+
+        return buildQueryParamOfProject(type, index);
     }
 
-    function handlePhotoClickBack() {
-        setCopied(false);
+    function getPreviousPhotoLink() {
+        const projectIndex = getProjectIndex();
+        let index = projectIndex - 1;
         if (projectIndex === 0) {
-            setProjectIndex(project.length - 1);
-        } else {
-            setProjectIndex(projectIndex - 1);
-        }
+            index = project.length - 1;
+        } 
+
+        return buildQueryParamOfProject(type, index);
     }
 
     if (imageOnly) {
@@ -85,7 +97,12 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
     }
 
 
+    const projectIndex = getProjectIndex();
     const projectAtCurrIndex = project[projectIndex];
+
+    if (!projectAtCurrIndex){
+        return null;
+    }
     return (
         <Modal
             isOpen={!!openedModalObject}
@@ -95,10 +112,10 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
 
         >
             <div style={{ display: 'flex' }}>
-                <img src={`img/${projectAtCurrIndex.photo}.jpg`} alt="modal" style={{ width: "50%", height: "100%", flex: '1.6 0 0' }}>
+                <img src={`/img/${projectAtCurrIndex.photo}.jpg`} alt="modal" style={{ width: "50%", height: "100%", flex: '1.6 0 0' }}>
                 </img>
-                {project.length > 1 && <img src={`img/icons/right-arrow.png`} alt="modal" className={`right-arrow ${imageOnly ? 'imageOnly' : ''}`} onClick={() => handlePhotoClick()}></img>}
-                {project.length > 1 && <img src={`img/icons/right-arrow.png`} alt="modal" className="left-arrow" onClick={() => handlePhotoClickBack()}></img>}
+                {project.length > 1 && <Link to={getNextPhotoLink()}><img src={`/img/icons/right-arrow.png`} alt="modal" className={`right-arrow ${imageOnly ? 'imageOnly' : ''}`}></img></Link>}
+                {project.length > 1 && <Link to={getPreviousPhotoLink()}><img src={`/img/icons/right-arrow.png`} alt="modal" className="left-arrow" ></img></Link>}
 
                 {project.length > 1 && <div className="modal_index">{`${projectIndex + 1}/${project.length}`}</div>}
                 {!imageOnly && <div className="projectModal__right">
@@ -107,15 +124,15 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
                     {renderTechStack(projectAtCurrIndex.tags)}
                     <div style={{ display: 'flex', marginTop: 10, marginLeft: 3 }}>
                         {projectAtCurrIndex.icons.map(icon =>
-                            <img src={`img/icons/${icon}.png`} alt="modal" className="tech-icon" style={{ marginRight: 10 }}></img>)}
+                            <img src={`/img/icons/${icon}.png`} alt="modal" className="tech-icon" style={{ marginRight: 10 }}></img>)}
                     </div>
 
                 </div>}
             </div>
-            <img src="img/icons/close-icon.png" className="site-icon" style={{ position: 'absolute', top: 10, right: 10, cursor: 'pointer' }} alt="close modal" onClick={closeModal}></img>
-            <CopyToClipboard text={`${window.location.origin}${buildQueryParamOfProject(type, projectIndex, imageOnly)}`}
+            <img src={`/img/icons/close-icon.png`} className="site-icon" style={{ position: 'absolute', top: 10, right: 10, cursor: 'pointer' }} alt="close modal" onClick={closeModal}></img>
+            <CopyToClipboard text={`${window.location.origin}${buildQueryParamOfProject(type, projectIndex)}`}
                 onCopy={() => setCopied(true)} style={{ marginTop: 'auto', position: 'absolute', bottom: 10, right: 10, cursor: 'pointer', fontSize: '1.5rem' }}>
-                {copied ? <div style={{ fontSize: 15 }}>Link copied!</div> : <img src="img/icons/clipboard.png" className="site-icon" style={{ position: 'absolute', bottom: 10, right: 10, }} alt="close modal"></img>}
+                {copied ? <div style={{ fontSize: 15 }}>Link copied!</div> : <img src={`/img/icons/clipboard.png`} className="site-icon" style={{ position: 'absolute', bottom: 10, right: 10, }} alt="close modal"></img>}
             </CopyToClipboard>
         </Modal>
     );

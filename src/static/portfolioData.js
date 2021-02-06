@@ -159,6 +159,7 @@ const parallelWorld = [0, 1, 2, 3, 4, 5].map(number => ({
     photo: `graphics/parallel/${number}`,
     // tags: ['Photoshop', 'Fashion stylist'],
     // icons: ['ps'],
+    imageOnly: true,
 }));
 
 const digitalFashion = [1, 2].map(number => ({
@@ -186,7 +187,7 @@ for (let i = 1; i < 9; i++) {
         description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
         tags: ['Photoshop', 'Moodboard'],
         icons: ['ps'],
-        imageOnly: i === 0,
+        imageOnly: true,
     });
 }
 
@@ -239,7 +240,7 @@ export const kanataProject = [{
     type: 'kanata',
 }];
 
-const rabbitPainting = [{
+const rabbit = [{
     title: 'Rabbit Painting',
     photo: `painting/rabbit`,
     description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
@@ -256,20 +257,20 @@ const moodBoard = [{
 }];
 
 export const projectsMap = {
-    namedayProject, 
-    christmasProject,
-    pantoneProject,
-    doshaBusinessCardProject,
-    parallelWorld, 
-    digitalFashion, 
-    liquidIllusion,
+    'nameday': namedayProject, 
+    'christmas': christmasProject,
+    'pantone': pantoneProject,
+    'business-card': doshaBusinessCardProject,
+    'parallel-world': parallelWorld, 
+    'digital-fashion': digitalFashion, 
+    'liquid-illusion': liquidIllusion,
     kanata,
     owl,
     goldfish,
     textiles,
     postcard,
-    rabbitPainting,
-    moodBoard
+    rabbit,
+    'mood-board': moodBoard
 }
 
 export default [
@@ -280,87 +281,87 @@ export default [
                 {
                     project: christmasProject,
                     index: 0,
-                    type: 'christmasProject',
+                    type: 'christmas',
                 },
                 {
                     project: namedayProject,
                     index: 13,
-                    type: 'namedayProject',
+                    type: 'nameday',
                 },
                 {
                     project: christmasProject,
                     index: 4,
-                    type: 'christmasProject',
+                    type: 'christmas',
                 },
                 {
                     project: pantoneProject,
                     index: 0,
-                    type: 'pantoneProject',
+                    type: 'pantone',
                 },
                 {
                     project: doshaBusinessCardProject,
                     index: 0,
-                    type: 'doshaBusinessCardProject',
+                    type: 'business-card',
                 },
             ],
             [
                 {
                     project: namedayProject,
                     index: 0,
-                    type: 'namedayProject',
+                    type: 'nameday',
                 },
                 {
                     project: pantoneProject,
                     index: 2,
-                    type: 'pantoneProject',
+                    type: 'pantone',
                 },
                 {
                     project: digitalFashion,
                     index: 0,
-                    type: 'digitalFashion',
+                    type: 'digital-fashion',
                 },
                 {
                     project: namedayProject,
                     index: 15,
-                    type: 'namedayProject',
+                    type: 'nameday',
                 },
                 {
                     project: liquidIllusion,
                     index: 0,
-                    type: 'liquidIllusion',
+                    type: 'liquid-illusion',
                 },
                 {
                     project: namedayProject,
                     index: 12,
-                    type: 'namedayProject',
+                    type: 'nameday',
                 },
             ],
             [
                 {
                     project: pantoneProject,
                     index: 4,
-                    type: 'pantoneProject',
+                    type: 'pantone',
                 },
                 {
                     project: namedayProject,
                     index: 10,
-                    type: 'namedayProject',
+                    type: 'nameday',
                 },
                 {
                     project: parallelWorld,
                     index: 0,
                     imageOnly: true,
-                    type: 'parallelWorld',
+                    type: 'parallel-world',
                 },
                 {
                     project: christmasProject,
                     index: 2,
-                    type: 'christmasProject',
+                    type: 'christmas',
                 },
                 {
                     project: namedayProject,
                     index: 17,
-                    type: 'namedayProject',
+                    type: 'nameday',
                 },
             ],
         ]
@@ -370,9 +371,9 @@ export default [
         content: [
             [
                 {
-                    project: rabbitPainting,
+                    project: rabbit,
                     index: 0,
-                    type: 'rabbitPainting',
+                    type: 'rabbit',
                 },
                 {
                     project: postcard,
@@ -384,7 +385,7 @@ export default [
                 {
                     project: moodBoard,
                     index: 0,
-                    type: 'moodBoard',
+                    type: 'mood-board',
                 },
                 {
                     project: postcard,

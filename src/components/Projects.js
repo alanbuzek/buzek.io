@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import portfolioData, { kanataProject } from '../static/portfolioData';
 import ReactTooltip from 'react-tooltip';
 import { buildQueryParamOfProject, getQueryVariable } from '../helper';
+import { Link } from 'react-router-dom';
 
 const Projects = (props) => {
     const { setOpenedModalObject } = props;
@@ -28,37 +29,28 @@ const Projects = (props) => {
                 { console.log(column)}
                 {column.map(({project, index, imageOnly, type}) => {
                     return (
-                    <a
+                    <Link
                         data-tip={project.length > 1 ? `Click to see all ${project.length} images!` : 'Click to see details!'}
-                        href={buildQueryParamOfProject(type, index, imageOnly)}
-                        onClick={e => {
-                            e.preventDefault();
-                            console.log(project);
-                            setOpenedModalObject({ project, index, imageOnly, type });
-                        }}
+                        to={buildQueryParamOfProject(type, index)}
                         >
-                        <img src={`img/${project[index].photo}.jpg`} alt="" />
+                        <img src={`/img/${project[index].photo}.jpg`} alt="" />
                         <h3>{project[index].title}</h3>
-                    </a>
+                    </Link>
                     );
                 })}
             </div>))}
         </section>}
         <section class="thumbnails">
             {portfolioData[selectedCategory].content.map(column => (<div>
-                {column.map(({project, index, imageOnly, type }) => {
+                {column.map(({project, index, type }) => {
                     return (
-                    <a
+                    <Link
                         data-tip={project.length > 1 ? `Click to see all ${project.length} images!` : 'Click to see details!'}
-                        href={buildQueryParamOfProject(type, index, imageOnly)}
-                        onClick={e => {
-                            e.preventDefault();
-                            setOpenedModalObject({project, index, imageOnly, type });
-                        }}
+                        to={buildQueryParamOfProject(type, index)}
                         >
-                        <img src={`img/${project[index].photo}.jpg`} alt="" />
+                        <img src={`/img/${project[index].photo}.jpg`} alt="" />
                         <h3>{project[index].title}</h3>
-                    </a>
+                    </Link>
                     );
                 })}
             </div>))}

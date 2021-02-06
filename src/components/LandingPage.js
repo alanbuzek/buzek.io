@@ -6,20 +6,30 @@ import About from './About';
 import { projectsMap } from '../static/portfolioData';
 import { getQueryVariable } from '../helper';
 import DocumentHead from './DocumentHead';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    useLocation
+  } from "react-router-dom";
 
 const LandingPage = () => {
     const [openedModalObject, setOpenedModalObject] = useState(null);
+    const location = useLocation();
 
     useEffect(() => {
         const projectType = getQueryVariable('project');
-        if (!projectType) return;
+
+        if (!projectType) {
+            setOpenedModalObject(null);
+        };
 
         const index = getQueryVariable('index') || 0;
-        const imageOnly = !!getQueryVariable('imageOnly');
-
         const project = projectsMap[projectType];
+
+        const imageOnly = (project || []).find(project => project.imageOnly);
         setOpenedModalObject({ project , index: parseInt(index, 10), imageOnly, type: projectType });
-    }, [])
+    }, [location])
 
     return (
         <main className="landing-page">
@@ -44,14 +54,10 @@ const LandingPage = () => {
             <section className="section section__1" id="skills">
                 <About />
             </section>
-            {/* {!openedModalObject && <DocumentHead
-                title="dosha.design - Yulia Lee's graphic design"
-                description="My personal graphic design brand. Check out my work!"
-                imageURL="https://dosha.design/img/graphics/other/og-image.png"
-            />} */}
             <ProjectModal 
                 openedModalObject={openedModalObject}
-                setOpenedModalObject={setOpenedModalObject}
+                setOpe
+                nedModalObject={setOpenedModalObject}
             />
         </main>
     );

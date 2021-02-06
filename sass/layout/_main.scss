@@ -314,31 +314,32 @@ a {
     text-decoration: none; /* no underline */
 }
 
-.right-arrow {
+.right-arrow,
+.left-arrow {
     width: 4rem;
     position: absolute;
     height: 4rem;
-    left: 53%;
     top: 48%;
     background: #ff9b9b94;
     border-radius: 50%;
     padding: 6px;
     cursor: pointer;
+
+    @media screen and (max-width: 900px) {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+.right-arrow {
+    left: 53%;
     &.imageOnly {
         left: 96%;
     }
 }
 
 .left-arrow {
-    width: 4rem;
-    position: absolute;
-    height: 4rem;
     left: 1%;
-    top: 48%;
-    background: #ff9b9b94;
-    border-radius: 50%;
-    padding: 6px;
-    cursor: pointer;
     transform: rotateY(3.142rad);
 }
 
@@ -356,4 +357,10 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 900px) {
+        width: 4rem;
+        height: 3rem;
+        font-size: 1.4rem;
+    }
 }

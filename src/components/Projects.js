@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import portfolioData from '../static/portfolioData';
+import portfolioData, { kanataProject } from '../static/portfolioData';
 import ReactTooltip from 'react-tooltip';
 
 const Projects = (props) => {
@@ -15,28 +15,47 @@ const Projects = (props) => {
             ))}
         </div>
         <ReactTooltip place="top" type="light" effect="solid" delayShow={100} />
-        <section class="thumbnails">
-            {portfolioData[selectedCategory].content.map(column => (<div>
-                {column.map(({project, index, imageOnly}) => {
+        {selectedCategory === 2 && <section class="thumbnails">
+            {[kanataProject].map(column => (<div style={{ width: column.find(project => project.fullWidth) ? '100%' : '' }}>
+                {column.map(({project, index, imageOnly, fullWidth}) => {
                     console.log(project, index);
                     return (
-                        <>
                     <a
                         data-tip={project.length > 1 ? `Click to see all ${project.length} images!` : 'Click to see details!'}
                         href="/"
                         onClick={e => {
                             e.preventDefault();
                             setOpenedModalObject({project, index, imageOnly });
-                        }}>
-
+                        }}
+                        >
                         <img src={`img/${project[index].photo}.jpg`} alt="" />
                         <h3>{project[index].title}</h3>
                     </a>
-                    </>
+                    );
+                })}
+            </div>))}
+        </section>}
+        <section class="thumbnails">
+            {portfolioData[selectedCategory].content.map(column => (<div style={{ width: column.find(project => project.fullWidth) ? '100%' : '' }}>
+                {column.map(({project, index, imageOnly, fullWidth}) => {
+                    console.log(project, index);
+                    return (
+                    <a
+                        data-tip={project.length > 1 ? `Click to see all ${project.length} images!` : 'Click to see details!'}
+                        href="/"
+                        onClick={e => {
+                            e.preventDefault();
+                            setOpenedModalObject({project, index, imageOnly });
+                        }}
+                        >
+                        <img src={`img/${project[index].photo}.jpg`} alt="" />
+                        <h3>{project[index].title}</h3>
+                    </a>
                     );
                 })}
             </div>))}
         </section>
+      
 
     </div>);
 }

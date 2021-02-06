@@ -33,9 +33,6 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
     
     let {project} = openedModalObject;
 
-    if (imageOnly){
-        project = project.slice(1);
-    }
 
     console.log(project);
 
@@ -62,7 +59,13 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
         }
     }
 
+    if (imageOnly){
+        project = project.slice(1);
+    }
+
+
     const projectAtCurrIndex = project[projectIndex];
+
     return (
         <Modal
             isOpen={!!openedModalObject}

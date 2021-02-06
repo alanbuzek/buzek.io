@@ -55,13 +55,13 @@ const namedayProject = [
     },
     {
         photo: 'robin',
-        title: 'Name Day Project no.0130 Robin', 
+        title: 'Name Day Project no.0130 Robin',
         description: [
-            'Robin is is a small insectivorous passerine bird that belongs to the chat subfamily of the Old World flycatcher family.', 
+            'Robin is is a small insectivorous passerine bird that belongs to the chat subfamily of the Old World flycatcher family.',
             'Červenka robin.'
         ]
     }
-].map(nameObj => ({ ...nameObj, tags: ['Adobe Illustrator', 'Font Design', 'Poster Design'], icons: ['ai'], photo: `graphics/nameday/${nameObj.photo}`}))
+].map(nameObj => ({ ...nameObj, tags: ['Adobe Illustrator', 'Font Design', 'Poster Design'], icons: ['ai'], photo: `graphics/nameday/${nameObj.photo}` }))
 
 
 const christmasProject = [1, 2, 3, 4, 5, 6].map(number => ({
@@ -121,6 +121,71 @@ const liquidIllusion = [{
     icons: ['ps']
 }];
 
+const kanata = [];
+
+for (let i = 1; i < 9; i++) {
+    kanata.push({
+        title: 'Kanata Graduation Project',
+        photo: `fashion/kanata/${i}`,
+        description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
+        tags: ['Photoshop', 'Moodboard'],
+        icons: ['ps'],
+        imageOnly: i === 0,
+    });
+}
+
+const owl = [];
+for (let i = 1; i < 4; i++) {
+    owl.push({
+        title: 'Owl Project',
+        photo: `fashion/owl/${i}`,
+        description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
+        tags: ['Photoshop', 'Moodboard'],
+        icons: ['ps'],
+    });
+}
+
+const goldfish = [];
+for (let i = 1; i < 7; i++) {
+    goldfish.push({
+        title: 'Goldfish Project',
+        photo: `fashion/goldfish/${i}`,
+        description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
+        tags: ['Photoshop', 'Moodboard'],
+        icons: ['ps'],
+    });
+}
+
+
+const textiles = [];
+for (let i = 1; i < 5; i++) {
+    textiles.push({
+        title: 'Textiles project',
+        photo: `fashion/textiles/${i}`,
+        description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
+        tags: ['Photoshop', 'Moodboard'],
+        icons: ['ps'],
+    });
+}
+
+const postcard = [];
+for (let i = 1; i < 5; i++) {
+    postcard.push({
+        title: 'Postcards',
+        photo: `painting/postcard-${i}`,
+        description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
+        tags: ['Photoshop', 'Moodboard'],
+        icons: ['ps'],
+    });
+}
+
+export const kanataProject = [{
+    project: kanata,
+    index: 0,
+    imageOnly: true,
+    fullWidth: true,
+}];
+
 export default [
     {
         name: 'Graphics',
@@ -148,17 +213,6 @@ export default [
                         icons: [],
                     }]
                 },
-                // {
-
-                //     index: 0,
-                //     project: [{
-                //         title: 'Painting project',
-                //         photo: 'ig-5',
-                //         description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-                //         tags: [],
-                //         icons: [],
-                //     }]
-                // },
                 {
                     project: namedayProject,
                     index: 6,
@@ -202,23 +256,12 @@ export default [
                 {
                     project: parallelWorld,
                     index: 0,
-                    imageOnly: true, 
+                    imageOnly: true,
                 },
                 {
                     project: christmasProject,
                     index: 4,
                 },
-                // {
-                //     project: [{
-                //         photo: 'colors-1',
-                //         title: 'Postcard Painting',
-                //         description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-                //         tags: [],
-                //         icons: [],
-                //     }],
-                //     index: 0,
-                // },
-            
                 {
                     project: pantoneProject,
                     index: 4
@@ -229,179 +272,63 @@ export default [
     {
         name: 'Painting',
         content: [
-            // [
-            //     {
-            //         title: 'Taipei Postcard',
-            //         photos: ['taipei-1'],
-            //         description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //         stack: [],
-            //     },
-            //     {
-            //         title: 'Fluffy Dog',
-            //         photos: ['postcard-4'],
-            //         description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //         stack: [],
-            //     },
-            //     {
-            //         title: 'Rabbit',
-            //         photos: ['rabbit'],
-            //         description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //         stack: [],
-            //     },
-            //     {
-            //         title: 'Postcard painting',
-            //         photos: ['postcard-5'],
-            //         description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //         stack: [],
-            //     },
-            // ],
-            // [
-            //     {
-            //         title: 'Fashion Design',
-            //         photos: ['ig-2'],
-            //         description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //         stack: [],
-            //     },
-            //     {
-            //         title: 'Virtual Garment',
-            //         photos: ['ig-3'],
-            //         description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //         stack: [],
-            //     }, {
-            //         title: 'Virtual Garment',
-            //         photos: ['image--025'],
-            //         description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //         stack: [],
-            //     },
-            //     {
-            //         title: 'Graphic design',
-            //         photos: ['ig-5'],
-            //         description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //         stack: [],
-            //     },
-            //     {
-            //         title: 'St. Petersburg',
-            //         photos: ['postcard-2'],
-            //         description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //         stack: [],
-            //     },
-            // ],
-            // [
-            //     {
-            //         title: '520 Holiday',
-            //         photos: ['postcard-1'],
-            //         description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //         stack: [],
-            //     },
-            //     {
-            //         title: 'Pattern Design',
-            //         photos: ['05'],
-            //         description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //         stack: [],
-            //     },
-            //     {
-            //         title: 'Pattern',
-            //         photos: ['image--015'],
-            //         description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //         stack: [],
-            //     },
-            // ],
+            [
+                {
+                    project: [{
+                        title: 'Rabbit Painting',
+                        photo: `painting/rabbit`,
+                        description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
+                        tags: ['Photoshop', 'Moodboard'],
+                        icons: ['ps'],
+                    }],
+                    index: 0,
+                },
+                {
+                    project: postcard,
+                    index: 1,
+                }
+            ],
+            [
+                {
+                    project: [{
+                        title: 'MoodBoard',
+                        photo: `painting/moodboard`,
+                        description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
+                        tags: ['Photoshop', 'Moodboard'],
+                        icons: ['ps'],
+                    }],
+                    index: 0,
+                },
+                {
+                    project: postcard,
+                    index: 3,
+                },
+            ],
+            [{
+                project: postcard,
+                index: 2,
+            },
+            {
+                project: postcard,
+                index: 0,
+            }],
         ]
     },
     {
         name: 'Fashion',
         content: [
-            // [{
-            //     title: 'Garment Design',
-            //     photos: ['image--015'],
-            //     description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //     stack: []
-            // }, {
-            //     title: 'Garment Design',
-            //     photos: ['13'],
-            //     description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //     stack: []
-            // },
-            // {
-            //     title: 'Garment Design',
-            //     photos: ['14'],
-            //     description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //     stack: []
-            // },
-            // {
-            //     title: 'Garment Design',
-            //     photos: ['image--017'],
-            //     description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //     stack: []
-            // },
-            // {
-            //     title: 'Garment Design',
-            //     photos: ['image--021'],
-            //     description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //     stack: []
-            // },
-            // {
-            //     title: 'Garment Design',
-            //     photos: ['image--022'],
-            //     description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //     stack: []
-            // },
-            // {
-            //     title: 'Garment Design',
-            //     photos: ['image--023'],
-            //     description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //     stack: []
-            // }
-
-            // ],
-            // [{
-            //     title: 'Garment Design',
-            //     photos: ['16'],
-            //     description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //     stack: []
-            // }, {
-            //     title: 'Garment Design',
-            //     photos: ['17'],
-            //     description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //     stack: []
-            // },
-            // {
-            //     title: 'Garment Design',
-            //     photos: ['18'],
-            //     description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //     stack: []
-            // }],
-            // [{
-            //     title: 'Garment Design',
-            //     photos: ['19'],
-            //     description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //     stack: []
-            // }, {
-            //     title: 'Garment Design',
-            //     photos: ['20'],
-            //     description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //     stack: []
-            // },
-            // {
-            //     title: 'Garment Design',
-            //     photos: ['image--017'],
-            //     description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //     stack: []
-            // },
-            // {
-            //     title: 'Garment Design',
-            //     photos: ['image--018'],
-            //     description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //     stack: []
-            // },
-            // {
-            //     title: 'Garment Design',
-            //     photos: ['image--019'],
-            //     description: [`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.`],
-            //     stack: []
-            // }
-
-            // ]
+            [{
+                project: goldfish,
+                index: 0,
+            }],
+            [{
+                project: owl,
+                index: 0,
+            }],
+            [{
+                project: textiles,
+                index: 0,
+            }],
         ]
     }
 ]

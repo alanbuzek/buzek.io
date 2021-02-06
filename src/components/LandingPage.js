@@ -5,6 +5,7 @@ import ProjectModal from './ProjectModal';
 import About from './About';
 import { projectsMap } from '../static/portfolioData';
 import { getQueryVariable } from '../helper';
+import DocumentHead from './DocumentHead';
 
 const LandingPage = () => {
     const [openedModalObject, setOpenedModalObject] = useState(null);
@@ -43,6 +44,11 @@ const LandingPage = () => {
             <section className="section section__1" id="skills">
                 <About />
             </section>
+            {/* {!openedModalObject && <DocumentHead
+                title="dosha.design - Yulia Lee's graphic design"
+                description="My personal graphic design brand. Check out my work!"
+                imageURL="https://dosha.design/img/graphics/other/og-image.png"
+            />} */}
             <ProjectModal 
                 openedModalObject={openedModalObject}
                 setOpenedModalObject={setOpenedModalObject}

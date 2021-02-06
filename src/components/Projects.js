@@ -30,7 +30,7 @@ const Projects = (props) => {
                     return (
                     <a
                         data-tip={project.length > 1 ? `Click to see all ${project.length} images!` : 'Click to see details!'}
-                        href="/"
+                        href={buildQueryParamOfProject(type, index, imageOnly)}
                         onClick={e => {
                             e.preventDefault();
                             console.log(project);
@@ -50,7 +50,7 @@ const Projects = (props) => {
                     return (
                     <a
                         data-tip={project.length > 1 ? `Click to see all ${project.length} images!` : 'Click to see details!'}
-                        href="/"
+                        href={buildQueryParamOfProject(type, index, imageOnly)}
                         onClick={e => {
                             e.preventDefault();
                             setOpenedModalObject({project, index, imageOnly, type });

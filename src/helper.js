@@ -13,3 +13,9 @@ export function buildQueryParamOfProject(type, index, imageOnly){
     return `?project=${type}&index=${index}${imageOnly ? '&imageOnly=true': ''}`
 }
 
+export function addMetaTag(type, typeValue, content){
+    const meta = document.createElement('meta');
+    meta[type] = typeValue;
+    meta.content = content;
+    document.getElementsByTagName('head')[0].appendChild(meta);
+}

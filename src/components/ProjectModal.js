@@ -41,11 +41,11 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
     useEffect(() => {
         window.history.pushState({}, document.title, buildQueryParamOfProject(type, projectIndex, imageOnly));
         document.title = project[projectIndex].title + " - dosha.design";
-        document.querySelector('meta[name="description"]').setAttribute("content", project[projectIndex].description.join(' '));
+        document.querySelector('meta[name="description"]').setAttribute("content", (project[projectIndex].description || []).join(' '));
         document.querySelector('meta[property="og:url"]').setAttribute("content", window.location.href);
         document.querySelector('meta[property="og:title"]').setAttribute("content", project[projectIndex].title + " - dosha.design");
         document.querySelector('meta[property="og:image"]').setAttribute("content", `${window.location.origin}/img/${project[projectIndex].photo}.jpg`);
-        document.querySelector('meta[property="og:description"]').setAttribute("content", project[projectIndex].description.join(' '));
+        document.querySelector('meta[property="og:description"]').setAttribute("content", (project[projectIndex].description || []).join(' '));
     }, [projectIndex])
 
     function closeModal() {

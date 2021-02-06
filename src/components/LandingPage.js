@@ -5,11 +5,7 @@ import ProjectModal from './ProjectModal';
 import About from './About';
 import { projectsMap } from '../static/portfolioData';
 import { getQueryVariable } from '../helper';
-import DocumentHead from './DocumentHead';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     useLocation
   } from "react-router-dom";
 

@@ -116,7 +116,170 @@ const namedayProject = [
             `Vanda, any of a genus (Vanda) of small-flowered tropical orchids of the Eastern Hemisphere, having racemes of fragrant white, lilac, blue, or greenish flowers.`,
             `Flower talk of Vanda means excellent and beautiful, immortal for all generations.`
         ]
-    }
+    },
+    {
+        photo: 'veronika',
+        title: 'Name Day Project no.0207 Veronika',
+        description: [
+            `Veronika is a girl's name of Latin origin meaning "she who brings victory".`,
+            `The greatest victory is over self.`
+        ]
+    },
+    {
+        photo: 'milada',
+        title: 'Name Day Project no.0208 Milada',
+        description: [
+            `Milada derives from the South Slavic “mlȃd (мла̑д)”, meaning “young, and gracious”.`,
+            `That young memory is so vague but charming.`
+        ]
+    },
+    {
+        photo: 'apolena',
+        title: 'Name Day Project no.0208 Apolena',
+        description: [
+            `Apolena is a variant form of Apollonia (Greek).
+            Mythology: Apollo was the Greek god of sunlight, music, and poetry.`
+        ]
+    },
+    {
+        photo: 'mojmir',
+        title: 'Name Day Project no.0210 Mojmír',
+        description: [
+            `Mojmír is Slavic origin, composed of two elements: from the Proto-Slavic “mój (*mojь)” (my, mine) plus “*mir" (*mirъ) mir ‎(мир)” (peace, calm, tranquility, universe, world). 1) Mojmir I (Latin: Moimarus, Moymarus, Czech and Slovak: Mojmír I.)`
+        ]
+    },
+    {
+        photo: 'bozena',
+        title: 'Name Day Project no.0211 Božena',
+        description: [
+            `Božena derives from the Proto-Slavic “bog / bogu- (*bogъ) > bóžy”, meaning “god, godly, divine, goddess”.`,
+            `Poetry is the spontaneous overflow of powerful feelings: it takes its origin from emotion recollected in tranquillity.`
+        ]
+    },
+    {
+        photo: 'slavena',
+        title: 'Name Day Project no.0212 Slavěna',
+        description: [
+            `Slavěna derives from the Slavic “sláva ‎(сла́ва)”, meaning “glory, fame, renown, honor, repute, reputation”.
+            Metal is more popular than it ever has been, every expression of it.`
+        ]
+    },
+    {
+        photo: 'venceslav',
+        title: 'Name Day Project no.0213 Věnceslav',
+        description: [
+            `Věnceslav derives from the Slavic “*vetye- sláva > Vecheslavu / Vyacheslav" (Вечеславъ)”, meaning “having greater glory”.`,
+            `Behind those greater glory, how much effort does it take.`
+        ]
+    },
+    {
+        photo: 'valentyn',
+        title: 'Name Day Project no.0214 Valentýn',
+        description: [
+            `Valentýn has been associated since the High Middle Ages with a tradition of courtly love.
+            Happy Valentine's Day!`
+        ]
+    },
+    {
+        photo: 'jirina',
+        title: 'Name Day Project no.0215 Jiřina',
+        description: [
+            `Jiřina derives from the Ancient Greek name “Geṓrgios ‎(Γεώργιος)”, from the element: “geōrgós ‎(γεωργός)” (tilling the ground, fertilizing), which in turn derives from “gê (γῆ)” (land, earth, country, soil) plus “érgon ‎(ἔργον)” (deed, doing, action, labour, work, task). In turn, the name means “land-worker, farmer”.`,
+            `“When tillage begins, other arts follow."`
+        ]
+    },
+    {
+        photo: 'ljuba',
+        title: 'Name Day Project no.0216 Ljuba',
+        description: [
+            `Ljuba is from the Slavic element lyuby meaning "love".`
+        ]
+    },
+    {
+        photo: 'miloslava',
+        title: 'Name Day Project no.0217 Miloslava',
+        description: [
+            `Miloslava is of Slavic origin, composed of two Proto-Slavic elements: “milŭ ‎(милъ) mil ‎(мил)” (kind, dear, nice, pleasant, loving, gracious, gentle, mild) plus “sláva ‎(сла́ва)” (glory, fame, renown, honor, repute, reputation). In turn the name means “the one who is kind to show glory”.`
+        ]
+    },
+    {
+        photo: 'gizela',
+        title: 'Name Day Project no.0218 Gizela',
+        description: [
+            `Gizela means "Pledge" and is of Polish origin.`,
+            `Just like typing in typewriter, you have to pay attention what you write on it since there's no delete button.
+            Pledge is indestructible faith because there's no regret button.`
+        ]
+    },
+    {
+        photo: 'patrik',
+        title: 'Name Day Project no.0219 Patrik',
+        description: [
+            `Patrik means “nobleman, patrician, of noble lineage, ancestry”, from “patres” nominative plural of “Pătĕr”, which in turn derives from the Proto-Italic “*patēr”, meaning “father, head of household”.`,
+            `"Patrician" originally referred to a group of elite families in Ancient Rome.`
+        ]
+    },
+    {
+        photo: 'oldrich',
+        title: 'Name Day Project no.0220 Oldřich',
+        description: [
+            `Oldřich derives from the Old High German name “Uodalrich”.
+            In turn, the name means “the power of richness, the distinction for its own property, prosperity, and power, mighty to riches.`
+        ]
+    },
+    {
+        photo: 'lenka',
+        title: 'Name Day Project no.0221 Lenka',
+        description: [
+            `Lenka represents the short form or the diminutive form of names linked to the family of Magdalēnḗ ‎(Μαγδαληνή) and Helénē (Ἑλένη).
+            Lenka derives from the Ancient Greek, which means elegant, great, , tower, torch, flambeau, brilliant, shining light, and the bright one.`
+        ]
+    },
+    {
+        photo: 'petr',
+        title: 'Name Day Project no.0222 Petr',
+        description: [
+            `Petr derives from Latin and Ancient Greek, meaning “stone, rock.`
+        ]
+    },
+    {
+        photo: 'svatopluk',
+        title: 'Name Day Project no.0223 Svatopluk',
+        description: [
+            `Svatopluk derives from the Medieval Slavonic, composed of two Proto-Slavic elements “свѣтъ (světŭ) свет (svet)” (bright, shine, light, white).`
+        ]
+    },
+    {
+        photo: 'matej',
+        title: 'Name Day Project no.0224 Matěj',
+        description: [
+            `Matěj derives from the Hebrew name, which was meaning “gift of the lord, gift of Yahweh”.`,
+            `Among the way, Creationism and science gradually merge, is that any possibility that we are just a gift code?`
+        ]
+    },
+    {
+        photo: 'liliana',
+        title: 'Name Day Project no.0225 Liliana',
+        description: [
+            `Lilianna is a diminutive form such as Elizabeth, Elisabeta, Elisabeth, Elizaveta, Elżbieta and Yelizaveta, which is meaning “my God is an oath, my God is abundance”.`,
+            `There is an intriguing story behind each acronym.`
+        ]
+    },
+    {
+        photo: 'dorota',
+        title: 'Name Day Project no.0226 Dorota',
+        description: [
+            `Drota derives from the Ancient Greek name “Dōrothéa (Δωροθέα)”, means “given to God, the gift of God”.`,
+            `A famous leading role in fairy tale "the Wizard of Oz" is named Dorothy.`
+        ]
+    },
+    {
+        photo: 'alexandr',
+        title: 'Name Day Project no.0227 Alexandr',
+        description: [
+            `Alexandr was one of the titles, "epithets", given to the Greek goddess Hera and as such is usually taken to mean "one who comes to save warriors".`
+        ]
+    },
 ].map(nameObj => ({ ...nameObj, tags: ['Adobe Illustrator', 'Font Design', 'Poster Design'], icons: ['ai'], photo: `graphics/nameday/${nameObj.photo}` }))
 
 
@@ -337,6 +500,11 @@ export default [
                     type: 'christmas',
                 },
                 {
+                    project: namedayProject,
+                    index: 10,
+                    type: 'nameday',
+                },
+                {
                     project: pantoneProject,
                     index: 0,
                     type: 'pantone',
@@ -357,6 +525,11 @@ export default [
                     project: pantoneProject,
                     index: 2,
                     type: 'pantone',
+                },
+                {
+                    project: namedayProject,
+                    index: 36,
+                    type: 'nameday',
                 },
                 {
                     project: digitalFashion,
@@ -387,7 +560,7 @@ export default [
                 },
                 {
                     project: namedayProject,
-                    index: 10,
+                    index: 21,
                     type: 'nameday',
                 },
                 {
@@ -395,6 +568,11 @@ export default [
                     index: 0,
                     imageOnly: true,
                     type: 'parallel-world',
+                },
+                {
+                    project: namedayProject,
+                    index: 24,
+                    type: 'nameday',
                 },
                 {
                     project: christmasProject,
@@ -419,14 +597,14 @@ export default [
                     type: 'rabbit',
                 },
                 {
-                    project: postcard,
-                    index: 1,
-                    type: 'postcard',
-                },
-                {
                     project: paperGarden,
                     index: 0,
                     type: 'paper-garden',
+                },
+                {
+                    project: postcard,
+                    index: 1,
+                    type: 'postcard',
                 },
             ],
             [

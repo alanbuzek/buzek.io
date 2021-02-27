@@ -10,7 +10,6 @@ class Intro extends React.Component {
     let inElement = 1;
     let outElement = 0;
     setInterval(() => {
-      console.log('animating');
       let animations = INITIAL_ANIMATIONS;
       animations[inElement] = 'in';
       animations[outElement] = 'out';

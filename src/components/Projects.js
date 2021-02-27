@@ -25,7 +25,6 @@ const Projects = (props) => {
         <ReactTooltip place="top" type="light" effect="solid" delayShow={100} />
         {selectedCategory === 2 && <section class="thumbnails">
             {[kanataProject].map(column => (<div style={{ width: '100%' }}>
-                { console.log(column)}
                 {column.map(({project, index, imageOnly, type}) => {
                     return (
                     <Link

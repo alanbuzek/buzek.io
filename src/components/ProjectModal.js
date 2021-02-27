@@ -38,7 +38,6 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
 
     const { imageOnly, type } = openedModalObject;
     let { project } = openedModalObject;
-    console.log(openedModalObject);
 
     const [copied, setCopied] = useState(false);
 

@@ -12,12 +12,17 @@ const About = () => {
                     <img src={`/img/graphics/other/yulia-lee-logo.jpg`} alt="modal" style={{ width: 300 }}></img>
                 </div>
                 <div className="about__right">
-                    <h2>About me</h2>
-                    <p style={{ marginTop: 10 }}>I'm Yulia,from Taipei, Taiwan. I am a senior of fashion design department at Shih Chien Univeristy. I grew up in the town where is famous for indigo dying. It influences me like to try any new ways to create texture or fabric. </p>
-                    <p style={{ marginTop: 10 }}>I am constantly striving to improve and learn. I love to travel and enjoys immersing myself into different cultures to explore design possibilities.
+                    <h3>About me</h3>
+                    <p style={{ marginTop: 10 }}>This is Yulia. I am born in Taiwan, now based in Europe.
+                        I am a creative. I can never seem to stop creating anything. There is always an idea, new picture, or some business idea running through my head. I cannot help but see a picture before I see words on it. I am drawn to color and the beauty around me. I have always been drawn to art and design. 
+                    </p>
+                    <p style={{ marginTop: 10 }}>
+                    “Dosha” means “thank you” in Taiwanese. I am grateful that I could immerse myself into different cultures and turn the virtual inspiration turns into interesting graphics.
                     </p>
                     <h3>Skills</h3>
-                    <p style={{ marginTop: 5 }}>I am constantly striving to improve and learn. I love to travel and enjoys immersing myself into different cultures.</p>
+                    <p style={{ marginTop: 5 }}>I am a dynamic fashion and graphic designer professional with a background in fashion design and production development experience. I am constantly striving to improve and learn. 
+                        Mainly professional in Adobe Photoshop and Illustration, including hand sketching, drawing, and watercolor. I have kept exploring the skill in CLO. 
+                        </p>
                     <div style={{ display: 'flex', marginTop: 5 }}>
                         {renderTechStack(['Painting', 'Fashion Design', 'Graphic Design', 'Illustration'])}
                     </div>
@@ -28,7 +33,7 @@ const About = () => {
                     <h3 style={{ marginTop: 20 }}>Contact</h3>
                     <p>
                         Feel free to get in touch with me at{' '}
-                        <a href="mailto:alan.buzek@gmail.com">dosha.design@gmail.com</a>.
+                        <a href="mailto:dosha.official@gmail.com">dosha.official@gmail.com</a> and follow my Instagram account <a href="https://instagram.com/dosha.design">@dosha.design</a>.
                     </p>
                 </div>
             </div>

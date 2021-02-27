@@ -13,7 +13,7 @@ class Topbar extends React.Component {
               <i className="fab fa-instagram icon" />
             </a>
 
-            <a href="https://www.linkedin.com/in/yulia-lee-41b35b137/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/yulia-lee-" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin icon" />
             </a>
           </div>

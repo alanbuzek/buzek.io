@@ -239,6 +239,7 @@
       background-color: rgb(255, 236, 236);
       color: #333 !important;
       border: 2px solid #333 !important;
+      text-transform: capitalize;
       @media only screen and (max-width: 600px) {
         display: none;
      }

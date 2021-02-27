@@ -69,7 +69,7 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
         document.querySelector('meta[property="og:image"]').setAttribute("content", `https://dosha.design/img/graphics/other/og-image.png`);
         document.querySelector('meta[property="og:description"]').setAttribute("content", `My personal graphic design brand. Check out my work!`);
 
-        history.push('/');
+        history.push(`/${window.location.search}`);
     }
 
     function getNextPhotoLink() {
@@ -120,7 +120,7 @@ const ProjectModal = ({ openedModalObject, setOpenedModalObject }) => {
                 {project.length > 1 && <div className="modal_index">{`${projectIndex + 1}/${project.length}`}</div>}
                 {!imageOnly && <div className="projectModal__right">
                     <h2 style={{ paddingRight: 20 }}>{projectAtCurrIndex.title}</h2>
-                    {projectAtCurrIndex.description.map(text => <p style={{ marginBottom: 5 }}>{text}</p>)}
+                    {projectAtCurrIndex.description.map(text => <p style={{ marginBottom: 10 }}>{text}</p>)}
                     {renderTechStack(projectAtCurrIndex.tags)}
                     <div style={{ display: 'flex', marginTop: 10, marginLeft: 3 }}>
                         {projectAtCurrIndex.icons.map(icon =>

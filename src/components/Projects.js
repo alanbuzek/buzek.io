@@ -1,26 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import portfolioData, { kanataProject } from '../static/portfolioData';
 import ReactTooltip from 'react-tooltip';
-import { buildQueryParamOfProject, getQueryVariable } from '../helper';
-import { Link } from 'react-router-dom';
+import { buildQueryParamOfProject } from '../helper';
+import { Link, useLocation } from 'react-router-dom';
 
 const Projects = (props) => {
-    const { setOpenedModalObject } = props;
-    const [selectedCategory, setSelectedCategory] = useState(0);
+    const { search = ''} = useLocation();
 
-    useEffect(() => {
-        const category = getQueryVariable('category');
-        if (category){
-            setSelectedCategory(parseInt(category, 10));
-        }
-    }, [])
+    let selectedCategory = 0;
+    if (search.endsWith('painting')){
+        selectedCategory = 1;
+    } else if (search.endsWith('fashion')){
+        selectedCategory = 2;
+    }
 
     return (<div className="dark-grey-text">
         <div style={{ display: 'flex', justifyContent: 'center', fontSize: 15, marginBottom: 45 }}>
             {portfolioData.map((dataCategory, index) => (
-                <div className={`card-button ${selectedCategory === index ? 'card-button--selected' : ''}`} onClick={() => setSelectedCategory(index)}>
+                <Link to={index === 0 ? '' : `?category=${dataCategory.name}`} key={index} className={`card-button ${selectedCategory === index ? 'card-button--selected' : ''}`} style={{ textTransform: 'capitalize', color: 'inherit'}}>
                     {dataCategory.name}
-                </div>
+                </Link>
             ))}
         </div>
         <ReactTooltip place="top" type="light" effect="solid" delayShow={100} />

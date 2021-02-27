@@ -1,3 +1,5 @@
+import { useLocation } from 'react-router-dom';
+
 const getQueryParam = param => {
     const query = window.location.search.substring(1);
     const vars = query.split('&');
@@ -25,7 +27,7 @@ export function getQueryVariable(variable) {
 }
 
 export function buildQueryParamOfProject(type, index){
-    return `/${type}/${index}`
+    return `/${type}/${index}${window.location.search}`
 }
 
 export function addMetaTag(type, typeValue, content){

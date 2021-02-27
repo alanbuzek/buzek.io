@@ -225,13 +225,46 @@ for (let i = 1; i < 5; i++) {
     });
 }
 
-const postcard = ['520 Holiday', 'St. Petersburg', 'Baloon dog','Painting postcards', 'Taipei'].map((title, index) => ({
-    title,
-    photo: `painting/postcard-${index + 1}`,
+
+const postcard = [
+    {
+        title:'520 Holiday',
+        photo: `painting/postcard-1`,
+        description: ['To all the people deserve love and be loved.'],
+        tags: ['Watercolor', 'Postcard', 'illustration', 'drawing'],
+        icons: [],
+    },
+    {
+        title: 'Most Camp Russia',
+        photo: `painting/postcard-2`,
+        description: ['Volunteering in Most Camp, Russia in 2016, the memories with the friends met there and the place traveled together.'],
+        tags: ['Polycolor ', 'illustration', 'drawing'],
+        icons: [],
+    },
+    {
+        title: 'Balloon animal',
+        photo: `painting/postcard-3`,
+        description: ['Happy birthday to friend who loves dogs.'],
+        tags: ['Polycolor','Postcard', 'illustration', 'drawing'],
+        icons: [],
+    },  
+    {
+        title: 'Taipei skyline TW',
+        photo: `painting/postcard-5`,
+        description: ['Taipei skyline view in my version'],
+        tags: ['Watercolor',  'Postcard', 'illustration', 'drawing'],
+        icons: [],
+    }
+];
+
+const liquidIllusionMoodboard = [{
+    title: 'Liquid Illusion Color Transfer Moodboard',
+    photo: `painting/postcard-4`,
     description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
-    tags: ['Photoshop', 'Moodboard'],
-    icons: ['ps'],
-}));
+    tags: ['Watercolor','Moodboard', 'illustration', 'drawing'],
+    icons: [],
+}];
+
 
 export const kanataProject = [{
     project: kanata,
@@ -241,20 +274,28 @@ export const kanataProject = [{
 }];
 
 const rabbit = [{
-    title: 'Rabbit Painting',
+    title: 'Easter Rabbit',
     photo: `painting/rabbit`,
-    description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
-    tags: ['Photoshop', 'Moodboard'],
-    icons: ['ps'],
+    description: ['Easter spells out beauty, the rare beauty of new life.'],
+    tags: ['Polycolor ', 'illustration', 'drawing'],
+    icons: [],
 }];
 
-const moodBoard = [{
-    title: 'MoodBoard',
-    photo: `painting/moodboard`,
-    description: ['Goldfish’s beautiful appearance is not a natural show, it is made by artificial breeding.'],
-    tags: ['Photoshop', 'Moodboard'],
-    icons: ['ps'],
-}];
+const paperGarden =[{
+    title: 'Paper Garden',
+    photo: 'painting/paper-garden',
+    description: ['Material textile experiment, inspired by "Paper Town".'],
+    tags: ['material','textile', 'paper'],
+    icons: [],
+}]
+
+const fashionSketches = [{
+    title: 'Fashion Sketches',
+    photo: 'painting/fashion-sketches',
+    description: ['Fashion illustration of graduation project, “Kanata”'],
+    tags: ['sketch', 'copicmarker'],
+    icons: [],
+}]
 
 export const projectsMap = {
     'nameday': namedayProject, 
@@ -264,18 +305,20 @@ export const projectsMap = {
     'parallel-world': parallelWorld, 
     'digital-fashion': digitalFashion, 
     'liquid-illusion': liquidIllusion,
+    'liquid-illusion-moodboard': liquidIllusionMoodboard,
+    'paper-garden': paperGarden,
+    'fashion-sketches': fashionSketches,
     kanata,
     owl,
     goldfish,
     textiles,
     postcard,
     rabbit,
-    'mood-board': moodBoard
 }
 
 export default [
     {
-        name: 'Graphics',
+        name: 'graphics',
         content: [
             [
                 {
@@ -367,7 +410,7 @@ export default [
         ]
     },
     {
-        name: 'Painting',
+        name: 'painting',
         content: [
             [
                 {
@@ -379,13 +422,18 @@ export default [
                     project: postcard,
                     index: 1,
                     type: 'postcard',
-                }
+                },
+                {
+                    project: paperGarden,
+                    index: 0,
+                    type: 'paper-garden',
+                },
             ],
             [
                 {
-                    project: moodBoard,
+                    project: liquidIllusionMoodboard,
                     index: 0,
-                    type: 'mood-board',
+                    type: 'liquid-illusion-moodboard',
                 },
                 {
                     project: postcard,
@@ -402,11 +450,16 @@ export default [
                 project: postcard,
                 index: 0,
                 type: 'postcard',
+            },
+            {
+                project: fashionSketches,
+                index: 0,
+                type: 'fashion-sketches'
             }],
         ]
     },
     {
-        name: 'Fashion',
+        name: 'fashion',
         content: [
             [{
                 project: goldfish,
